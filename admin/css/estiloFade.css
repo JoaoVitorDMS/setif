@@ -1,0 +1,19 @@
+@keyframes hide {
+    from { opacity: 1 }
+    to   { opacity: 0 }
+  }
+  
+  .alert-success {
+    animation: hide 1.5s 1.5s forwards;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  
+  .alert-danger {
+    animation: hide 1.5s 1.5s forwards;
+    color: #ffffff;
+    background-color: #f80a0a;
+    border-color: #e24545;
+  }

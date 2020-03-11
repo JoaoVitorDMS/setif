@@ -44,6 +44,7 @@ $nome = $pega['nameUser'];
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/ruang-admin.min.css" rel="stylesheet">
+    <link href="css/estiloFade.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -142,10 +143,11 @@ $nome = $pega['nameUser'];
                         </ol>
                     </div>
                     <div class="container">
-                        <form action="" method="post" enctype=multipart/form-data>
+                        <form enctype="multipart/form-data" action="" method="post">
                             <div class="input-group mb-3">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                    <input type="file" class="custom-file-input" name="arquivo[]" multiple
+                                        id="inputGroupFile02">
                                     <label class="custom-file-label" for="inputGroupFile02"
                                         aria-describedby="inputGroupFileAddon02">Escolher arquivo</label>
                                 </div>
@@ -158,7 +160,25 @@ $nome = $pega['nameUser'];
                             </div>
                         </form>
                     </div>
-
+                    <pre>
+<?php
+include 'conexao.php';
+// =====================================================================//
+if(isset($_FILES['arquivo'])){
+    for($i=0; $i< count($_FILES['arquivo']['name']); $i++){
+        $nomeArq = sha1($_FILES['arquivo']['name'][$i].rand(1,999)).'.jpg';
+        move_uploaded_file($_FILES['arquivo']['tmp_name'][$i], 'uploads/'.$nomeArq);
+        $sql = "INSERT INTO `img`(`caminho`) VALUES ('$nomeArq')";
+        $inserir = mysqli_query($conexao,$sql);
+        echo '<div class= "alert alert-success text-center" style="margin-top: 20px;" role="alert"> Imagem cadastrada com sucesso :)</div>';
+    }
+}else{
+    echo '<div class="alert alert-danger text-center" style="margin-top: 20px;" role="alert"> Algo deu errado, só é permitido arquivos jpg, ou png T_T </div>';
+    
+}
+// ====================================================================//
+?>
+</pre>
                 </div>
             </div>
             <footer class="sticky-footer bg-white">
