@@ -2,14 +2,14 @@
 session_start();
 ob_start();
 if(!isset($_SESSION['usuario'])|| empty($_SESSION['usuario'])){
-    header("Location: log?erro=sem-permissao");
+    header("Location: login?erro=sem-permissao");
     exit();
     die();
 }
 if(isset($_GET["sair"])&& $_GET['sair'] == "logout"){
     session_destroy();
     session_unset();
-    header("Location: log?logout");
+    header("Location: login?logout");
     exit();
     die();
 }
@@ -23,12 +23,13 @@ if($conta > 0){
 }else{
         session_destroy();
     session_unset();
-    header("Location: log?erro=usuario-invalido");
+    header("Location: login?erro=usuario-invalido");
     exit();
     die();
 }
 $pega = mysqli_fetch_array($busca);
 $nome = $pega['nameUser'];
+$id = $pega['idUser'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -112,12 +113,11 @@ $nome = $pega['nameUser'];
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
                                 <span class="ml-2 d-none d-lg-inline text-white small"><?php echo $nome; ?></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="editarUsuario.php?id=<?php echo $id ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Editar
                                 </a>
@@ -141,18 +141,18 @@ $nome = $pega['nameUser'];
                             <li class="breadcrumb-item active" aria-current="page">listarTrab</li>
                         </ol>
                     </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Autores</th>
-                                    <th scope="col">Titulo</th>
-                                    <th scope="col">Ano</th>
-                                    <th scope="col">Tipo</th>
-                                    <th scope="col">Ação</th>
-                                </tr>
-                            </thead>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Autores</th>
+                                <th scope="col">Titulo</th>
+                                <th scope="col">Ano</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Ação</th>
+                            </tr>
+                        </thead>
 
-                            <?php
+                        <?php
      include 'conexao.php';
      $sql = "SELECT * FROM `texto` ";
      $busca  = mysqli_query($conexao, $sql);
@@ -165,26 +165,29 @@ $nome = $pega['nameUser'];
         $ano = $array['ano'];
         $tipo = $array['tipo'];
      ?>
-                            <tr>
-                                <td><?php echo $nameAutor ?></td>
-                                <td><?php echo $titulo ?></td>
-                                <td><?php echo $ano ?></td>
-                                <td><?php echo $tipo ?></td>
-                                <td><a class="btn btn-warning bt-sm" style="color: #FFF;"
-                                        href="editarTrab.php?id=<?php echo $idTrab ?>" role="button"><i
-                                            class="far fa-edit"></i>&nbsp;Editar</a>
-                                    <a class="btn btn-danger bt-sm" style="color: #FFF;"
-                                        href="deletarTrab.php?id=<?php echo $idTrab ?>" role="button"><i
-                                            class="far fa-trash-alt"></i>&nbsp;Excluir</a>
-                                </td>
-                            </tr>
-                            <?php } ?>
+                        <tr>
+                            <td><?php echo $nameAutor ?></td>
+                            <td><?php echo $titulo ?></td>
+                            <td><?php echo $ano ?></td>
+                            <td><?php echo $tipo ?></td>
+                            <td><a class="btn btn-warning bt-sm" style="color: #FFF;"
+                                    href="editarTrab.php?id=<?php echo $idTrab ?>" role="button" onclick="return confirm('Deseja mesmo Editar?');"><i
+                                        class="far fa-edit"></i>&nbsp;Editar</a>
+                                <a class="btn btn-danger bt-sm" style="color: #FFF;"
+                                    href="deletarTrab.php?id=<?php echo $idTrab ?>" role="button"
+                                    onclick="return confirm('Deseja mesmo Excluir?');"><i
+                                        class="far fa-trash-alt"></i>&nbsp;Excluir</a>
+                            </td>
+                        </tr>
+                        <?php } ?>
 
 
-                        </table>
+                    </table>
                     </div>
-                    <!-- Footer -->
-                    <footer class="sticky-footer bg-white">
+                    </div>
+                </div>
+            </div>
+			<footer class="sticky-footer bg-white">
                         <div class="container my-auto">
                             <div class="copyright text-center my-auto">
                                 <span>copyright &copy; <script>
@@ -196,9 +199,6 @@ $nome = $pega['nameUser'];
                         </div>
                     </footer>
                     <!-- Footer -->
-                </div>
-            </div>
-
             <!-- Scroll to top -->
             <a class="scroll-to-top rounded" href="#page-top">
                 <i class="fas fa-angle-up"></i>

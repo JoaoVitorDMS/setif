@@ -75,7 +75,7 @@
 
                     <div class="text-center p-t-12">
                         <span class="txt1">Já possui um cadastro?</span>
-                        <a class="txt2" href="log">
+                        <a class="txt2" href="login.php">
                             Clique aqui?
                         </a>
                     </div>

@@ -2,14 +2,14 @@
 session_start();
 ob_start();
 if(!isset($_SESSION['usuario'])|| empty($_SESSION['usuario'])){
-    header("Location: log?erro=sem-permissao");
+    header("Location: login?erro=sem-permissao");
     exit();
     die();
 }
 if(isset($_GET["sair"])&& $_GET['sair'] == "logout"){
     session_destroy();
     session_unset();
-    header("Location: log?logout");
+    header("Location: login?logout");
     exit();
     die();
 }
@@ -23,12 +23,13 @@ if($conta > 0){
 }else{
         session_destroy();
     session_unset();
-    header("Location: log?erro=usuario-invalido");
+    header("Location: login?erro=usuario-invalido");
     exit();
     die();
 }
 $pega = mysqli_fetch_array($busca);
 $nome = $pega['nameUser'];
+$id = $pega['idUser'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -112,17 +113,16 @@ $nome = $pega['nameUser'];
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
                                 <span class="ml-2 d-none d-lg-inline text-white small"><?php echo $nome; ?></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="editarUsuario.php?id=<?php echo $id ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Editar
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.html">
+                                <a class="dropdown-item" href="?sair=logout">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Sair
                                 </a>

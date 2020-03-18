@@ -8,46 +8,59 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="img/ifpr.png" rel="icon">
-    <title>Setif</title>
+    <title>Anais Evento</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
     <style type="text/css">
     img {
         max-width: 100%;
         height: auto;
-    }
+        }
     </style>
 </head>
 
 <body>
-    <img src="img/setif.jpeg" alt="Setif">
-    <div class="container" style="margin-top: 40px">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="menu.php">Setif</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid" style="margin-top: 40px">
+        <img src="img/setif.jpeg" alt="Setif">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10"
+                aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Programação</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Apresentação</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inscrições</a>
+                        <a class="nav-link" href="inscricao.php">Inscrições</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Imagens</a>
+                        <a class="nav-link" href="programacao.php">Programação</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
+                        <a class="nav-link" href="ensalamento.php">Ensalamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="normasPublicacao.php">Normas de Publicação</a>
+                    </li>
+                    <li class="nav-item activate">
+                        <a class="nav-link active" href="anaisEvento.php">Anais Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="corpoEditorial.php">Corpo Editorial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fotosEvento.php">Fotos</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="row" style="text-align: center; margin-top: 60px;">
             <div class="col-sm">
-                <form action="filtro.php" method="post">
+                <form action="" method="post">
                     <input type="hidden" class="form-control" name="id" value="<?php echo $id ?>">
                     <label class="control-label">Ano</label>
                     <select class="form-control" name="ano">
