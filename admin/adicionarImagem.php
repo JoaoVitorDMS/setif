@@ -145,7 +145,7 @@ $id = $pega['idUser'];
                     <div class="container">
                         <form enctype="multipart/form-data" action="" method="post">
                             <div class="input-group mb-3">
-                                <input type="file" name="arquivo[]" class="form-control" multiple>
+                                <input type="file" name="arquivo[]" class="form-control" accept="image/*" multiple>
                                 <div class="input-group-append">
                                 <button type="submit" class="btn  btn-primary">Upload</button>
                                 </div>
@@ -158,16 +158,16 @@ include 'conexao.php';
 // =====================================================================//
 if(isset($_FILES['arquivo'])){
     for($i=0; $i< count($_FILES['arquivo']['name']); $i++){
-        $nomeArq = sha1($_FILES['arquivo']['name'][$i].rand(1,999)).'.jpg';
+        $nomeArq = sha1($_FILES['arquivo']['name'][$i].rand(1,999)).".jpg";
         move_uploaded_file($_FILES['arquivo']['tmp_name'][$i], 'uploads/'.$nomeArq);
         $sql = "INSERT INTO `img`(`caminho`) VALUES ('$nomeArq')";
         $inserir = mysqli_query($conexao,$sql);
         echo '<div class= "alert alert-success text-center" style="margin-top: 20px;" role="alert"> Imagem cadastrada com sucesso :)</div>';
     }
-}else{
-    echo '<div class="alert alert-danger text-center" style="margin-top: 20px;" role="alert"> Algo deu errado T_T </div>';
-    
 }
+// else{
+//     echo '<div class="alert alert-danger text-center" style="margin-top: 20px;" role="alert"> Algo deu errado T_T </div>';    
+// }
 // ====================================================================//
 ?>
 </pre>
