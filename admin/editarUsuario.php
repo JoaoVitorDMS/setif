@@ -59,7 +59,7 @@ $id = $_GET['id'];
                 </div>
             </a>
             <hr class="sidebar-divider my-0">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>inicio</span></a>
@@ -88,7 +88,7 @@ $id = $_GET['id'];
             <div class="sidebar-heading">
                 Tabelas
             </div>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable"
                     aria-expanded="true" aria-controls="collapseTable">
                     <i class="fas fa-fw fa-table"></i>
@@ -97,7 +97,9 @@ $id = $_GET['id'];
                 <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Listas</h6>
-                        <a class="collapse-item active" href="listarTrab">Listar Trabalhos</a>
+                        <a class="collapse-item" href="listarTrab">Listar Trabalhos</a>
+                        <a class="collapse-item" href="listAno.php">Anos</a>
+                        <a class="collapse-item" href="listImagem.php">Imagens</a>
                     </div>
                 </div>
             </li>
@@ -119,7 +121,7 @@ $id = $_GET['id'];
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="editarUsuario.php?id=<?php echo $id ?>">
+                                <a class="dropdown-item active" href="editarUsuario.php?id=<?php echo $id ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Editar
                                 </a>
@@ -138,7 +140,7 @@ $id = $_GET['id'];
 		$sql = "SELECT * FROM `usuario` WHERE idUser = $id";
 		$buscar = mysqli_query($conexao, $sql);
 		while ($array = mysqli_fetch_array($buscar)) {
-		$idFornecedor = $array['idUser'];
+		$idUser = $array['idUser'];
      	$nameUser = $array['nameUser'];
      	$emailUser = $array['emailUser'];
         $nivelUser = $array['nivelUser'];
@@ -148,15 +150,15 @@ $id = $_GET['id'];
                             <label>Nome do usuário</label>
                             <input type="text" name="nameUser" class="form-control" value="<?php echo $nameUser ?>"
                                 autocomplete="off">
-                            <input type="hidden" class="form-control" name="id" value="<?php echo $id ?>" readOnly>
+                            <input type="hidden" class="form-control" name="id" value="<?php echo $idUser ?>" readOnly>
                             <label>E-mail</label>
                             <input type="text" name="emailUser" class="form-control" value="<?php echo $emailUser ?>"
                                 autocomplete="off">
-                            <label>senha</label>
-                            <input type="password" name="senhaUser" class="form-control"
-                                value="<?php echo $senhaUser ?>" autocomplete="off" readOnly>
                         </div>
-                        <div style="text-align: right;">
+                        <div style="text-align: center; height: 100px;">
+                        <a role="button" type="submit" class="btn btn-sm btn-dark" href="recuperarAcesso.php">Alterar a senha</a>
+                        </div>
+                        <div style="text-align: right; margin-top: -60px;">
                             <button type="submit" class="btn btn-sm btn-primary">Atualizar</button>
                         </div>
                         <?php } ?>

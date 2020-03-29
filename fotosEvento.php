@@ -73,7 +73,7 @@
     </div>
     <div class="container">
 
-        <h1 class="display-4 text-center" >Imagens do evento</h1>
+        <h1 class="text-center" >Imagens do evento</h1>
 
         <hr class="mt-2 mb-5">
 

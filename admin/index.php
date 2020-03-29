@@ -1,6 +1,5 @@
 <?php
 session_start();
-$r=session_id();
 ob_start();
 if(!isset($_SESSION['usuario'])|| empty($_SESSION['usuario'])){
     header("Location: login?erro=sem-permissao");
@@ -22,7 +21,7 @@ $conta = mysqli_num_rows($busca);
 
 if($conta > 0){
 }else{
-        session_destroy();
+    session_destroy();
     session_unset();
     header("Location: login?erro=usuario-invalido");
     exit();
@@ -87,7 +86,7 @@ $id = $pega['idUser'];
             <div class="sidebar-heading">
                 Tabelas
             </div>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable"
                     aria-expanded="true" aria-controls="collapseTable">
                     <i class="fas fa-fw fa-table"></i>
@@ -96,7 +95,9 @@ $id = $pega['idUser'];
                 <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Listas</h6>
-                        <a class="collapse-item active" href="listarTrab">Listar Trabalhos</a>
+                        <a class="collapse-item" href="listarTrab">Listar Trabalhos</a>
+                        <a class="collapse-item" href="listAno.php">Anos</a>
+                        <a class="collapse-item" href="listImagem.php">Imagens</a>
                     </div>
                 </div>
             </li>
@@ -142,81 +143,13 @@ $id = $pega['idUser'];
                             <li class="breadcrumb-item active" aria-current="page">Inicio</li>
                         </ol>
                     </div>
-                    <div style="margin-top: 20px;text-align: center;">
-                        <h4 class="display-4">Artigos</h4>
-                    </div>
-                    <div class="row mb-3">
-                        <?php
-     include 'conexao.php';
-     $sql = "SELECT * FROM `texto` WHERE tipo = 'Artigo' ORDER BY idTrab DESC";
-     $busca  = mysqli_query($conexao, $sql);
-     while ($array = mysqli_fetch_array($busca)) {
-      $idTrab = $array['idTrab'];
-      $autor = $array['autores'];
-      $titulo = $array['titulo'];
-      $ano = $array['ano'];
-      $link = $array['link'];
-      $tipo = $array['tipo'];
-     ?>
-                        <div class="col-sm-6" style="margin-top: 20px">
-                            <div class="card text-center">
-                                <div class="card-header">
-                                    <?php echo $tipo ?>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $autor?></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted"><?php echo $titulo; ?></h6>
-                                    <p><a href="<?php echo $titulo; ?>"><?php echo $titulo; ?></a></p>
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <?php echo $ano ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?php } ?>
-                    </div>
-                </div>
-                <!--Row-->
-                <div style="margin-top: 20px;text-align: center;">
-                    <h4 class="display-4">Resumos</h4>
-                </div>
-                <!--Another Row-->
-                <div class="row mb-3">
-                    <?php
-     include 'conexao.php';
-     $sql = "SELECT * FROM `texto` WHERE tipo = 'Resumo' ORDER BY idTrab DESC";
-     $busca  = mysqli_query($conexao, $sql);
-     while ($array = mysqli_fetch_array($busca)) {
-      $idTrab = $array['idTrab'];
-      $autor = $array['autores'];
-      $titulo = $array['titulo'];
-      $ano = $array['ano'];
-      $link = $array['link'];
-      $tipo = $array['tipo'];
-     ?>
-                    <div class="col-sm-6" style="margin-top: 20px">
-                        <div class="card text-center">
-                            <div class="card-header">
-                                <?php echo $tipo ?>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $autor?></h5>
-                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $titulo; ?></h6>
-                                <p><a href="https://www.google.com/?gws_rd=ssl">Google</a>
-                                </p>
-                            </div>
-                            <div class="card-footer text-muted">
-                                <?php echo $ano ?>
-                            </div>
-                        </div>
-                    </div>
-                    <?php } ?>
-                </div>
-            </div>
-        </div>
+                    <div style="margin-top: 50px;">
+                 <h2 class="display-2 text-center">Olá <?php echo $nome ?>, bem vindo a área administrativa da SETIF.</h2>
+                 </div>
         <!---Container Fluid-->
     </div>
     <!-- Footer -->
+    </div>
     <footer class="sticky-footer bg-white">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">

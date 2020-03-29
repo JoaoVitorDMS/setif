@@ -72,6 +72,7 @@
         <article id="post-351" class="post-351 page type-page status-publish hentry">
             <div class="entry-content clearfix">
                 <h2>Ensalamento</h2>
+                <hr class="mt-2 mb-5">
                 <p style="font-weight: 400;"><strong>Laboratório&nbsp;1</strong></p>
                 <p style="font-weight: 400;">1</p>
                 <p style="font-weight: 400;"><a

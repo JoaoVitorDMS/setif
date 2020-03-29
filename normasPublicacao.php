@@ -75,6 +75,7 @@
         <article>
             <div class="entry-content clearfix">
                 <h2>Datas Importantes</h2>
+                <hr class="mt-2 mb-5">
                 <p style="font-weight: 400;"><strong>Data limite para a submissão de&nbsp;trabalhos:</strong> <del>02 de
                         setembro de 2019</del><strong><span style="color: #ff0000;"> 09 de setembro de
                             2019</span></strong><br>

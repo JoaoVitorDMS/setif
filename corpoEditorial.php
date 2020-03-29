@@ -71,6 +71,7 @@
     <div class="container" style="margin-top: 20px;">
     <article>
 <h2>Comitê do Programa</h2>
+<hr class="mt-2 mb-5">
 <p>Alexandre Avincola (IFPR)</p>
 <p>Ana Carolina Bialetzki (IFPR)</p>
 <p>Anderson Oliveira (PUC-Rio)</p>

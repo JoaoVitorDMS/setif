@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="text-center p-t-12">
-                        <a class="txt2" href="#">
+                        <a class="txt2" href="recuperarAcesso.php">
                             Esqueceu a senha?
                         </a>
                     </div>

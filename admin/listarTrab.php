@@ -57,7 +57,7 @@ $id = $pega['idUser'];
                 </div>
             </a>
             <hr class="sidebar-divider my-0">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>inicio</span></a>
@@ -95,7 +95,9 @@ $id = $pega['idUser'];
                 <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Listas</h6>
-                        <a class="collapse-item active" href="listarTrab">Listar Trabalhos</a>
+                        <a class="collapse-item active" href="listarTrab.php">Trabalhos</a>
+                        <a class="collapse-item" href="listAno.php">Anos</a>
+                        <a class="collapse-item" href="listImagem.php">Imagens</a>
                     </div>
                 </div>
             </li>
@@ -148,16 +150,33 @@ $id = $pega['idUser'];
                                 <th scope="col">Titulo</th>
                                 <th scope="col">Ano</th>
                                 <th scope="col">Tipo</th>
-                                <th scope="col">Ação</th>
+                                <th style="text-align: right;" scope="col">Ação</th>
                             </tr>
                         </thead>
 
                         <?php
      include 'conexao.php';
-     $sql = "SELECT * FROM `texto` ";
+     $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : 1;
+     $sql = "SELECT * FROM `trabalho` ORDER BY idTrab DESC";
      $busca  = mysqli_query($conexao, $sql);
+     $totalDado = mysqli_num_rows($busca);
 
-     while ($array = mysqli_fetch_array($busca)) {
+     $quantidadePag = 15;
+
+     $numPag = ceil($totalDado/$quantidadePag);
+
+     $inicio = ($quantidadePag * $pagina)-$quantidadePag;
+
+     $resu = "SELECT * FROM `trabalho` ORDER BY idTrab DESC  LIMIT $inicio, $quantidadePag";
+
+     $resultado = mysqli_query($conexao,$resu);
+     $totalDado = mysqli_num_rows($resultado);
+     if($totalDado > 0){
+
+    }else{
+        echo '<center><h4 class="display-2">Nenhum resultado encontrado</h4></center>';
+    }
+     while ($array = mysqli_fetch_array($resultado)) {
      	$idTrab = $array['idTrab'];
      	$nameAutor = $array['autores'];
         $titulo = $array['titulo'];
@@ -171,45 +190,88 @@ $id = $pega['idUser'];
                             <td><?php echo $ano ?></td>
                             <td><?php echo $tipo ?></td>
                             <td><a class="btn btn-warning bt-sm" style="color: #FFF;"
-                                    href="editarTrab.php?id=<?php echo $idTrab ?>" role="button" onclick="return confirm('Deseja mesmo Editar?');"><i
-                                        class="far fa-edit"></i>&nbsp;Editar</a>
-                                <a class="btn btn-danger bt-sm" style="color: #FFF;"
+                                    href="editarTrab.php?id=<?php echo $idTrab ?>" role="button"
+                                    onclick="return confirm('Deseja mesmo Editar?');"><i
+                                        class="far fa-edit"></i>&nbsp;Editar</a></td>
+                            <td><a class="btn btn-danger bt-sm" style="color: #FFF;"
                                     href="deletarTrab.php?id=<?php echo $idTrab ?>" role="button"
                                     onclick="return confirm('Deseja mesmo Excluir?');"><i
                                         class="far fa-trash-alt"></i>&nbsp;Excluir</a>
                             </td>
                         </tr>
                         <?php } ?>
-
-
                     </table>
-                    </div>
+                    <?php
+                    $paginaAnterior = $pagina-1;
+                    $paginaPosterior = $pagina+1;
+                    
+                    ?>
+                    <div style="margin-top: 10px;">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center pagination-mg">
+                                <li class="page-item">
+                                    <?php
+        if($paginaAnterior != 0){ ?>
+                                    <a class="page-link" style="background-color: #32CD32;color: white "
+                                        href="listarTrab.php?pagina=<?php echo $paginaAnterior; ?>" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                    <?php } else{ ?>
+                                    <span class="page-link" style="background-color: #32CD32;color: white "
+                                        aria-hidden="true">&laquo;</span>
+                                    <?php }?>
+                                </li>
+                                <?php
+    for($i = 1; $i < $numPag +1; $i++){ ?>
+                                <li class="page-item"><a class="page-link"
+                                        style="background-color: #32CD32;color: white "
+                                        href="listarTrab.php?pagina=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+
+                                <?php } ?>
+                                <li class="page-item">
+                                    <?php
+        if($paginaPosterior <= $numPag){ ?>
+                                    <a class="page-link" style="background-color: #32CD32;color: white "
+                                        href="listarTrab.php?pagina=<?php echo $paginaPosterior; ?>"" aria-label=" Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                    <?php } else{ ?>
+                                    <span class="page-link" style="background-color: #32CD32;color: white "
+                                        aria-hidden="true">&raquo;</span>
+                                    <?php }?>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-            </div>
-			<footer class="sticky-footer bg-white">
-                        <div class="container my-auto">
-                            <div class="copyright text-center my-auto">
-                                <span>copyright &copy; <script>
-                                    document.write(new Date().getFullYear());
-                                    </script> - developed by
-                                    <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
-                                </span>
-                            </div>
-                        </div>
-                    </footer>
-                    <!-- Footer -->
-            <!-- Scroll to top -->
-            <a class="scroll-to-top rounded" href="#page-top">
-                <i class="fas fa-angle-up"></i>
-            </a>
 
-            <script src="vendor/jquery/jquery.min.js"></script>
-            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-            <script src="js/ruang-admin.min.js"></script>
-            <script src="vendor/chart.js/Chart.min.js"></script>
-            <script src="js/demo/chart-area-demo.js"></script>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>copyright &copy; <script>
+                    document.write(new Date().getFullYear());
+                    </script> - developed by
+                    <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <!-- Scroll to top -->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/ruang-admin.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
 </body>
 
 </html>

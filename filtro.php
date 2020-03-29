@@ -66,7 +66,7 @@
 
     $totalDado = mysqli_num_rows($busca);
 
-    $quantidadePag = 6;
+    $quantidadePag = 20;
 
     $numPag = ceil($totalDado/$quantidadePag);
 

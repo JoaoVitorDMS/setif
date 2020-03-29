@@ -6,8 +6,8 @@ include 'conexao.php';
  $link = $_POST['link'];
  $ano = $_POST['ano'];
  $tipo = $_POST['tipo'];
- $sql = "INSERT INTO `texto`(`autores`, `titulo`,`link` ,`ano`,`tipo`) VALUES ('$autor','$titulo','$link',$ano,'$tipo')";
+ $sql = "INSERT INTO `trabalho`(`autores`, `titulo`,`link` ,`ano`,`tipo`) VALUES ('$autor','$titulo','$link',$ano,'$tipo')";
  $inserir = mysqli_query($conexao,$sql);
-header("Location: index");
+header("Location: listarTrab.php");
 ?>
 

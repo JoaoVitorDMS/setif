@@ -63,7 +63,8 @@
         <article style="margin-top: 40px;">
             <h2 class="display-5">Para se inscrever nas atividades do evento acesse o seguinte endereço: <a
                     href="https://www.even3.com.br/setif2019/">SETIF-2019</a></h2>
-                    <iframe src="./Programação_files/pub.html" height="100%" width="100%">
+                    <hr class="mt-2 mb-5">
+                    <iframe src="./Programacao_files/pub.html" height="1100" width="1100">
                     </iframe>
         </article>
     </div>

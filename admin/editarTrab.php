@@ -30,6 +30,7 @@ if($conta > 0){
 $pega = mysqli_fetch_array($busca);
 $nome = $pega['nameUser'];
 $id = $pega['idUser'];
+$id = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -76,7 +77,7 @@ $id = $pega['idUser'];
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Cadastros</h6>
-                        <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
+                        <a class="collapse-item active" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
                     </div>
@@ -96,6 +97,8 @@ $id = $pega['idUser'];
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Listas</h6>
                         <a class="collapse-item active" href="listarTrab">Listar Trabalhos</a>
+                        <a class="collapse-item" href="listAno.php">Anos</a>
+                        <a class="collapse-item" href="listImagem.php">Imagens</a>
                     </div>
                 </div>
             </li>
@@ -145,7 +148,7 @@ $id = $pega['idUser'];
         </div>
         <form action="_atualizar_trabalhos.php" method="post" style="margin-top: 20px">
             <?php
-		$sql = "SELECT * FROM `texto` WHERE idTrab = $id";
+		$sql = "SELECT * FROM `trabalho` WHERE idTrab = $id";
 		$buscar = mysqli_query($conexao, $sql);
 		while ($array = mysqli_fetch_array($buscar)) {
 		$idTrab = $array['idTrab'];
@@ -200,7 +203,8 @@ $id = $pega['idUser'];
     <?php } ?>
     </form>
     </div>
-            <footer class="sticky-footer bg-white">
+    </div>
+    <footer class="sticky-footer bg-white">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
                 <span>copyright &copy; <script>
@@ -212,9 +216,6 @@ $id = $pega['idUser'];
         </div>
     </footer>
     <!-- Footer -->
-    </div>
-    </div>
-
     <!-- Scroll to top -->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>

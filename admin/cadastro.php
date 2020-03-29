@@ -59,8 +59,7 @@
                         </span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Repita a senha corretamente">
-                        <input class="input100" type="password" name="senhaUser2" placeholder="Repita senha"
-                            oninput="validaSenha(this)">
+                        <input class="input100" type="password" name="senhaUser2" placeholder="Repita a senha"  oninput="validaSenha(this)">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>

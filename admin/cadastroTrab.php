@@ -57,7 +57,7 @@ $id = $pega['idUser'];
                 </div>
             </a>
             <hr class="sidebar-divider my-0">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>inicio</span></a>
@@ -66,7 +66,7 @@ $id = $pega['idUser'];
             <div class="sidebar-heading">
                 Paginas
             </div>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
                     aria-expanded="true" aria-controls="collapseBootstrap">
                     <i class="fas fa-keyboard"></i>
@@ -76,7 +76,7 @@ $id = $pega['idUser'];
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Cadastros</h6>
-                        <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
+                        <a class="collapse-item active" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
                     </div>
@@ -86,7 +86,7 @@ $id = $pega['idUser'];
             <div class="sidebar-heading">
                 Tabelas
             </div>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable"
                     aria-expanded="true" aria-controls="collapseTable">
                     <i class="fas fa-fw fa-table"></i>
@@ -95,7 +95,9 @@ $id = $pega['idUser'];
                 <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Listas</h6>
-                        <a class="collapse-item active" href="listarTrab">Listar Trabalhos</a>
+                        <a class="collapse-item" href="listarTrab">Listar Trabalhos</a>
+                        <a class="collapse-item" href="listAno.php">Anos</a>
+                        <a class="collapse-item" href="listImagem.php">Imagens</a>
                     </div>
                 </div>
             </li>
@@ -141,7 +143,7 @@ $id = $pega['idUser'];
                     <div style="text-align: center;">
                         <h4>Cadastro de trabalhos</h4>
                     </div>
-                    <form action="inserirTexto.php" method="post">
+                    <form action="inserirTrabalho.php" method="post">
                         <div class="form-group">
                             <label class="control-label">Autores</label>
                             <input type="text" class="form-control" name="autor" placeholder="Insira o nome dos autores"

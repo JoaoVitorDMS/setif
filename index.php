@@ -30,17 +30,19 @@
     ul {
         text-align: center;
     }
+
     .container img {
-    align: middle;
-    max-width: 150px;
-    max-height: 100px;
-    margin-top: 10px;
-    width: auto;
-    height: auto;
+        align: middle;
+        max-width: 250px;
+        max-height: 150px;
+        margin-top: 10px;
+        width: auto;
+        height: auto;
     }
+
     .container {
-    clear: both;
-    margin-top: 20px;
+        clear: both;
+        margin-top: 20px;
     }
     </style>
 </head>
@@ -85,75 +87,56 @@
         </nav>
     </div>
     <article style="margin-top: 40px;">
-            <h2 class="text-center">Sobre o evento</h2>
-            <p><span style="font-weight: 400;">A Semana da Tecnologia da Informação do IFPR Campus Paranavaí
-                    (SETIF) é um evento que acontece todos os anos na cidade de Paranavaí-PR. Além da mostra de
-                    trabalhos, este evento conta com minicursos, palestras e competições. Neste ano, a SETIF ocorrerá no
-                    período de 08 a 10 de outubro.</span></p>
-            <p>As inscrições para as palestras e mini-cursos devem ser realizadas por meio do Even3:&nbsp;<a
-                    href="https://www.even3.com.br/setif2019/">https://www.even3.com.br/setif2019/</a></p>
-            <h2 class="text-center">Parceiros</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/apice.jpg" alt="Patrocinadores"></p>
-                    </div>
+        <h2 class="text-center">Sobre o evento</h2>
+        <hr class="mt-2 mb-5">
+        <p><span style="font-weight: 400;">A Semana da Tecnologia da Informação do IFPR Campus Paranavaí
+                (SETIF) é um evento que acontece todos os anos na cidade de Paranavaí-PR. Além da mostra de
+                trabalhos, este evento conta com minicursos, palestras e competições. Neste ano, a SETIF ocorrerá no
+                período de 08 a 10 de outubro.</span></p>
+        <p>As inscrições para as palestras e mini-cursos devem ser realizadas por meio do Even3:&nbsp;<a
+                href="https://www.even3.com.br/setif2019/">https://www.even3.com.br/setif2019/</a></p>
+        <h2 class="text-center">Parceiros</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/apice.jpg" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/augustus.jpeg" alt="Patrocinadores"></p>
-                    </div>
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/augustus.jpeg" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/garoto.jpg" alt="Patrocinadores"></p>
-                    </div>
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/garoto.jpg" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                       <p><img src="patrocinadores/ghaya.png" alt="Patrocinadores"></p>
-                    </div>
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/ghaya.png" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/grandChef.jpg" alt="Patrocinadores"></p>
-                    </div>
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/grandChef.jpg" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/guguy.jpeg" alt="Patrocinadores"></p>
-                    </div>
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/guguy.jpeg" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/IMG_2159-300x300.jpg" alt="Patrocinadores"></p>
-                    </div>
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/IMG_2159-300x300.jpg" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/infomania.png" alt="Patrocinadores"></p>
-                    </div>
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/infomania.png" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/meb.png" alt="Patrocinadores"></p>
-                    </div>
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/meb.png" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/mallmann.jpg" alt="Patrocinadores"></p>
-                    </div>
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/mallmann.jpg" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/minutinho.png" alt="Patrocinadores"></p>
-                    </div>
+
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/minutinho.png" alt="Patrocinadores"></p>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p><img src="patrocinadores/suelen.png" alt="Patrocinadores"></p>
-                    </div>
+                <div class="col-6 col-md-4">
+                    <p><img src="patrocinadores/suelen.png" alt="Patrocinadores"></p>
                 </div>
+            </div>
+            <div class="container" style="margin-top: 50px;">
                 <h2 class="text-center">Contato</h2>
                 <div class="paragraph">
                     <p>e-mail: <a href="mailto:tads.paranavai@ifpr.edu.br"
@@ -169,7 +152,7 @@
                         width="640" height="480"></iframe></p>
             </div>
     </article>
-
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

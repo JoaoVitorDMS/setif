@@ -66,6 +66,7 @@
 <div class="container" style="margin-top: 20px;">
     <article>
     <h2 class="text-center">Submissão</h2>
+    <hr class="mt-2 mb-5">
     <p>Os trabalhos devem ser submetidos por meio do Easy Chair:</span></p>
 <p><a href="https://easychair.org/conferences/?conf=setif2019">EasyChair for SETIF-2019</a></p>
 <p>&nbsp;</p>
