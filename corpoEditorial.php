@@ -38,7 +38,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+            <div class="collapse navbar-collapse" id="navbarsExample10">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Apresentação</a>
@@ -69,56 +69,98 @@
         </nav>
     </div>
     <div class="container" style="margin-top: 20px;">
-    <article>
-<h2>Comitê do Programa</h2>
-<hr class="mt-2 mb-5">
-<p>Alexandre Avincola (IFPR)</p>
-<p>Ana Carolina Bialetzki (IFPR)</p>
-<p>Anderson Oliveira (PUC-Rio)</p>
-<p><span style="font-weight: 400;">André Ricardo Zavan (IFPR)</span></p>
-<p>Angela Fontana Marques (IFPR)</p>
-<p>Carmem Lúcia Graboski Da Gama (IFPR)</p>
-<p><span style="font-weight: 400;">Daniela Eloise Flôr (IFPR)</span></p>
-<p><span style="font-weight: 400;">Danyllo Albuquerque (UniNassau)</span></p>
-<p>Douglas Rodrigues (IFPR)</p>
-<p>Eduardo Fernandes (PUC-Rio)</p>
-<p>Eduardo Henrique Molina da Cruz (IFPR)</p>
-<p>Eloilson Domingos (IFPR)</p>
-<p>Elvio Leonardo (UEM)</p>
-<p>Gleice Almeida (IFPR)</p>
-<p><span style="font-weight: 400;">Hélio Toshio Kamakawa (IFPR)</span></p>
-<p><span style="font-weight: 400;">José Barbosa Dias Júnior (IFPR)</span></p>
-<p><span style="font-weight: 400;">Késsia Rita da Costa Marchi (IFPR)</span></p>
-<p>Marco Antonio Zanata&nbsp; (UFPR)</p>
-<p>Matheus Serpa&nbsp; (UFRGS)</p>
-<p><span style="font-weight: 400;">Maximilian Melo (IFMS)</span></p>
-<p>Rafael Ferques (IFPR)</p>
-<p><span style="font-weight: 400;">Rafael Henrique Dalegrave Zottesso (IFPR)</span></p>
-<p>Rafael Petermann (IFPR)</p>
-<p><span style="font-weight: 400;">Roberto Oliveira (UEG)</span></p>
-<p>Thais Yanaga (IFPR)</p>
-<p>Vanilza Santos (IFPR)</p>
-<p>Willian Oizumi (IFPR)</p>
-<p>&nbsp;</p>
-<h2>Presidente</h2>
-<p>Eduardo Henrique Molina da Cruz (IFPR)</p>
-<p>&nbsp;</p>
-<h2>Comitê Organizador da SETIF</h2>
-<p><span style="font-weight: 400;">André Ricardo Zavan (IFPR)</span></p>
-<p><span style="font-weight: 400;">Daniela Eloise Flôr (IFPR)</span></p>
-<p>Eduardo Henrique Molina da Cruz (IFPR)</p>
-<p><span style="font-weight: 400;">Frank Willian Cardoso de Oliveira (IFPR)</span></p>
-<p><span style="font-weight: 400;">Hélio Toshio Kamakawa (IFPR)</span></p>
-<p><span style="font-weight: 400;">José Barbosa Dias Júnior (IFPR)</span></p>
-<p><span style="font-weight: 400;">Késsia Rita da Costa Marchi (IFPR)</span></p>
-<p><span style="font-weight: 400;">Rafael Henrique Dalegrave Zottesso (IFPR)</span></p>
-<p><span style="font-weight: 400;">Willian Nalepa Oizumi (IFPR)</span></p>
-			</div>
-	<footer class="entry-meta-bar clearfix">	        			
-		<div class="entry-meta clearfix">
-       			</div>
-	</footer>
-	</article>
+    <article  style="margin-top: 40px;">
+            <!-- <h2 >Comitê do Programa</h2>
+            <hr class="mt-2 mb-5">
+            <p>Alexandre Avincola (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>Ana Carolina Bialetzki (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>Anderson Oliveira (PUC-Rio)</p>
+            <hr class="mt-2 mb-5">
+            <p><span style="font-weight: 400;">André Ricardo Zavan (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p>Angela Fontana Marques (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>Carmem Lúcia Graboski Da Gama (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p><span style="font-weight: 400;">Daniela Eloise Flôr (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p><span style="font-weight: 400;">Danyllo Albuquerque (UniNassau)</span></p>
+            <hr class="mt-2 mb-5">
+            <p>Douglas Rodrigues (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>Eduardo Fernandes (PUC-Rio)</p>
+            <hr class="mt-2 mb-5">
+            <p>Eduardo Henrique Molina da Cruz (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>Eloilson Domingos (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>Elvio Leonardo (UEM)</p>
+            <hr class="mt-2 mb-5">
+            <p>Gleice Almeida (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p><span style="font-weight: 400;">Hélio Toshio Kamakawa (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p><span style="font-weight: 400;">José Barbosa Dias Júnior (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p><span style="font-weight: 400;">Késsia Rita da Costa Marchi (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p>Marco Antonio Zanata&nbsp; (UFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>Matheus Serpa&nbsp; (UFRGS)</p>
+            <hr class="mt-2 mb-5">
+            <p><span style="font-weight: 400;">Maximilian Melo (IFMS)</span></p>
+            <hr class="mt-2 mb-5">
+            <p>Rafael Ferques (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p><span style="font-weight: 400;">Rafael Henrique Dalegrave Zottesso (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p>Rafael Petermann (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p><span style="font-weight: 400;">Roberto Oliveira (UEG)</span></p>
+            <hr class="mt-2 mb-5">
+            <p>Thais Yanaga (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>Vanilza Santos (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>Willian Oizumi (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>&nbsp;</p> -->
+            <h2 class="text-left">Presidente</h2>
+            <hr class="mt-2 mb-5">
+            <p class="text-left">Eduardo Henrique Molina da Cruz (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p>&nbsp;</p>
+            <h2 class="text-left">Comitê Organizador da SETIF</h2>
+            <hr class="mt-2 mb-5">
+            <p class="text-left"><span style="font-weight: 400;">André Ricardo Zavan (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left"><span style="font-weight: 400;">Ayslan Trevisan Possebom (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left"><span style="font-weight: 400;">Daniela Eloise Flôr (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left">Eduardo Henrique Molina da Cruz (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left">Fabiano Utiyama (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left">Felipe Augusto Moreira Bonifácio (IFPR)</p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left"><span style="font-weight: 400;">Frank Willian Cardoso de Oliveira (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left"><span style="font-weight: 400;">Hélio Toshio Kamakawa (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left"><span style="font-weight: 400;">José Barbosa Dias Júnior (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left"><span style="font-weight: 400;">Késsia Rita da Costa Marchi (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left"><span style="font-weight: 400;">Marcelo Figueiredo Terenciani (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left"><span style="font-weight: 400;">Rafael Henrique Dalegrave Zottesso (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+            <p class="text-left"><span style="font-weight: 400;">Willian Nalepa Oizumi (IFPR)</span></p>
+            <hr class="mt-2 mb-5">
+    </article>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

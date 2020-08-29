@@ -76,6 +76,7 @@ $id = $pega['idUser'];
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Cadastros</h6>
+                        <a class="collapse-item" href="cadastro.php">Usuário</a>
                         <a class="collapse-item active" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
@@ -145,18 +146,18 @@ $id = $pega['idUser'];
                     </div>
                     <form action="inserirTrabalho.php" method="post">
                         <div class="form-group">
-                            <label class="control-label">Autores</label>
-                            <input type="text" class="form-control" name="autor" placeholder="Insira o nome dos autores"
-                                autocomplete="off" required="on">
-                            <label>Titulo</label>
+                            <b><label class="control-label">Autores</label>
+                            <input type="text" class="form-control" name="autor" placeholder="Nome dos autores."
+                                autocomplete="off" required>
+                            <label>Título</label>
                             <input type="text" class="form-control" name="titulo"
-                                placeholder="Insira o titulo do trabalho" autocomplete="off" required="on">
-                            <label>Link do drive</label>
-                            <input type="text" class="form-control" name="link" placeholder="Cole o link aqui"
-                                autocomplete="off" required="on">
+                                placeholder="Título do trabalho." autocomplete="off" required>
+                            <label>Link</label>
+                            <input type="text" class="form-control" name="link" placeholder="Link, pode ser do drive/dropbox."
+                                autocomplete="off" required>
                             <label>Ano</label>
-                            <select class="form-control" name="ano">
-                                <option selected disabled>Selecione</option>
+                            <select class="form-control" name="ano" required>
+                                <option selected disabled value="0">Selecione.</option>
                                 <?php
                           include 'conexao.php';
                          $sql = "SELECT * FROM ano";
@@ -169,8 +170,8 @@ $id = $pega['idUser'];
                                 <?php } ?>
                             </select>
                             <label>Tipo</label>
-                            <select class="form-control" name="tipo">
-                                <option selected disabled>Selecione</option>
+                            <select class="form-control" name="tipo" required>
+                                <option selected disabled value="0">Selecione.</option>
                                 <?php
                           include 'conexao.php';
                          $sql = "SELECT * FROM tipo";
@@ -184,7 +185,7 @@ $id = $pega['idUser'];
                             </select>
                         </div>
                         <div style="text-align: right;">
-                            <button type="submit" class="btn btn-sm btn-primary">Salvar</button>
+                            <button type="submit" class="btn btn-sm btn-primary">Cadastrar</button>
                         </div>
                 </div>
                 </form>

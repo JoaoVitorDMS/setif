@@ -61,13 +61,12 @@
     <div class="container">
         <div class="row">
         <div style = "margin-top: 40px;">
-        <h3 class="display-2">Anais evento 2018</h3>
+        <h3 class="display-2">Anais evento 2020</h3>
         <hr class="mt-2 mb-5">
         <h4 style="margin-top: 30px;" class="display-5">Artigos</h4>
-        <hr class="mt-2 mb-5">
         <?php
         include 'conexao.php';
-        $sql = "SELECT * FROM `trabalho` WHERE ano= 2018 and tipo='Artigo'";
+        $sql = "SELECT * FROM `trabalho` WHERE ano= 2020 and tipo='Artigo'";
         $busca = mysqli_query($conexao, $sql);
         $total = mysqli_num_rows($busca);
         if($total > 0){
@@ -92,10 +91,9 @@
         <?php } ?>
         <div style = "margin-top: 40px;">
         <h3 style="margin-top: 20px;">Resumos</h3>
-        <hr class="mt-2 mb-5">
         <?php
         include 'conexao.php';
-        $sql = "SELECT * FROM `trabalho` WHERE ano= 2018 and tipo='Resumo'";
+        $sql = "SELECT * FROM `trabalho` WHERE ano= 2020 and tipo='Resumo'";
         $busca = mysqli_query($conexao, $sql);
         $total = mysqli_num_rows($busca);
         if($total > 0){

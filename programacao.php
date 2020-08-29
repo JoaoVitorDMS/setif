@@ -29,7 +29,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+            <div class="collapse navbar-collapse" id="navbarsExample10">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Apresentação</a>
@@ -61,10 +61,9 @@
     </div>
     <div class="container">
         <article style="margin-top: 40px;">
-            <h2 class="display-5">Para se inscrever nas atividades do evento acesse o seguinte endereço: <a
-                    href="https://www.even3.com.br/setif2019/">SETIF-2019</a></h2>
+            <h2 class="display-5">Para se inscrever nas atividades do evento acesse o seguinte endereço:  Disponível em breve</h2>
                     <hr class="mt-2 mb-5">
-                    <iframe src="./Programacao_files/pub.html" height="1100" width="1100">
+                    <!-- <iframe src="./Programacao_files/pub.html" height="1100" width="1100"> -->
                     </iframe>
         </article>
     </div>

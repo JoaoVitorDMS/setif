@@ -29,7 +29,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+            <div class="collapse navbar-collapse" id="navbarsExample10">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Apresentação</a>
@@ -58,20 +58,26 @@
                 </ul>
             </div>
         </nav>
-        <article class="text-center" style="margin-top: 20px;">
-            <div class="entry-content clearfix">
-                <p><a href="anaisEvento2019.php">Anais do Evento 2019</a></p>
+        <div class="container" style="margin-top: 20px;">
+        <article class="text-left" style="margin-top: 40px;">
+            <div>
+                <h2  style="margin-top: 20px;">Edição Atual</h2>
+                <hr class="mt-2 mb-5">
+                <p><a href="anaisEvento2020.php">Anais do Evento 2020</a></p>
+                <hr class="mt-2 mb-5">
                 <h2 style="margin-top: 20px;">Edições Anteriores</h2>
                 <hr class="mt-2 mb-5">
+                <p><a href="anaisEvento2019.php">Anais do Evento 2019</a></p>
+                <hr class="mt-2 mb-5">
                 <p style="margin-top: 20px;"><a href="anaisEvento2018.php">Anais do Evento 2018</a></p>
+                <hr class="mt-2 mb-5">
                 <p><a href="anaisEvento2017.php">Anais do Evento 2017</a></p>
+                <hr class="mt-2 mb-5">
                 <p><a href="anaisEvento2016.php">Anais do Evento 2016</a></p>
+                <hr class="mt-2 mb-5">
             </div>
-            <footer class="entry-meta-bar clearfix">
-                <div class="entry-meta clearfix">
-                </div>
-            </footer>
         </article>
+        </div>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
         </script>

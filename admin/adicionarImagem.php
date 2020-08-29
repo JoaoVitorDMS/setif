@@ -77,6 +77,7 @@ $id = $pega['idUser'];
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Cadastros</h6>
+                        <a class="collapse-item" href="cadastro.php">Usuário</a>
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item active" href="adicionarImagem.php">Imagem</a>
@@ -136,25 +137,24 @@ $id = $pega['idUser'];
                 <!-- Topbar -->
 
                 <!-- Container Fluid-->
-                <div class="container-fluid" id="container-wrapper">
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Imagens</h1>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="./">Inicio</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Imagem</li>
-                        </ol>
-                    </div>
-                    <div class="container">
-                        <form enctype="multipart/form-data" action="" method="post">
-                            <div class="input-group mb-3">
-                                <input type="file" name="arquivo[]" class="form-control" accept="image/*" multiple>
-                                <div class="input-group-append">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Imagens</h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="./">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Imagem</li>
+                    </ol>
+                </div>
+                <div class="container">
+                    <form enctype="multipart/form-data" action="" method="post">
+                        <div class="input-group mb-3">
+                            <input type="file" name="arquivo[]" class="form-control" accept="image/*" multiple>
+                            <div class="input-group-append">
                                 <button type="submit" class="btn  btn-primary">Upload</button>
-                                </div>
                             </div>
-                        </form>
-                    </div>
-                    <pre>
+                        </div>
+                    </form>
+                </div>
+                <pre>
 <?php
 include 'conexao.php';
 // =====================================================================//
@@ -173,31 +173,32 @@ if(isset($_FILES['arquivo'])){
 // ====================================================================//
 ?>
 </pre>
-                </div>
             </div>
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>copyright &copy; <script>
-                            document.write(new Date().getFullYear());
-                            </script> - developed by
-                            <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
-                        </span>
-                    </div>
-                </div>
-            </footer>
-            <!-- Footer -->
-            <!-- Scroll to top -->
-            <a class="scroll-to-top rounded" href="#page-top">
-                <i class="fas fa-angle-up"></i>
-            </a>
+        </div>
+    </div>
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>copyright &copy; <script>
+                    document.write(new Date().getFullYear());
+                    </script> - developed by
+                    <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <!-- Scroll to top -->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-            <script src="vendor/jquery/jquery.min.js"></script>
-            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-            <script src="js/ruang-admin.min.js"></script>
-            <script src="vendor/chart.js/Chart.min.js"></script>
-            <script src="js/demo/chart-area-demo.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/ruang-admin.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
 </body>
 
 

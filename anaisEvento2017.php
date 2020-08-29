@@ -64,6 +64,7 @@
         <h3 class="display-2">Anais evento 2017</h3>
         <hr class="mt-2 mb-5">
         <h4 style="margin-top: 30px;" class="display-5">Artigos</h4>
+        <hr class="mt-2 mb-5">
         <?php
         include 'conexao.php';
         $sql = "SELECT * FROM `trabalho` WHERE ano= 2017 and tipo='Artigo'";
@@ -91,6 +92,7 @@
         <?php } ?>
         <div style = "margin-top: 40px;">
         <h3 style="margin-top: 20px;">Resumos</h3>
+        <hr class="mt-2 mb-5">
         <?php
         include 'conexao.php';
         $sql = "SELECT * FROM `trabalho` WHERE ano= 2017 and tipo='Resumo'";

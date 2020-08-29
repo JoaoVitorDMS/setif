@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "siteSetif";
+$database = "sitesetif";
 $username = "root";
 $password = "";
 $conexao = mysqli_connect($servername, $username, $password, $database);

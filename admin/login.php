@@ -46,7 +46,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Digite a senha">
-                        <input class="input100" type="password" name="senha" placeholder="senha">
+                        <input class="input100" type="password" name="senha" placeholder="Senha">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
@@ -62,14 +62,6 @@
                     <div class="text-center p-t-12">
                         <a class="txt2" href="recuperarAcesso.php">
                             Esqueceu a senha?
-                        </a>
-                    </div>
-
-                    <div class="text-center p-t-136">
-                        <span class="txt1">Não tem um cadastro?</span>
-                        <a class="txt2" href="cadastro">
-                            Clique aqui.
-                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                         </a>
                     </div>
                 </form>

@@ -41,7 +41,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+            <div class="collapse navbar-collapse" id="navbarsExample10">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Apresentação</a>
@@ -73,7 +73,7 @@
     </div>
     <div class="container">
 
-        <h1 class="text-center" >Imagens do evento</h1>
+        <h1 class="text-left" >Imagens do evento</h1>
 
         <hr class="mt-2 mb-5">
 

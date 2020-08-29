@@ -76,6 +76,7 @@ $id = $pega['idUser'];
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Cadastros</h6>
+                        <a class="collapse-item" href="cadastro.php">Usuário</a>
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>

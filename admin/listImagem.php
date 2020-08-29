@@ -45,11 +45,12 @@ $id = $pega['idUser'];
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/ruang-admin.min.css" rel="stylesheet">
-   <style type="text/css">
-   img {
+    <style type="text/css">
+    img {
         max-width: 100%;
         height: auto;
     }
+
     .container img {
         align: middle;
         max-width: 250px;
@@ -58,6 +59,7 @@ $id = $pega['idUser'];
         width: auto;
         height: auto;
     }
+
     .container {
         clear: both;
         margin-top: 20px;
@@ -94,6 +96,7 @@ $id = $pega['idUser'];
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Cadastros</h6>
+                        <a class="collapse-item" href="cadastro.php">Usuário</a>
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
@@ -161,15 +164,16 @@ $id = $pega['idUser'];
                             <li class="breadcrumb-item active" aria-current="page">listImagem</li>
                         </ol>
                     </div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Imagens</th>
-                                <th style="text-align: center;" scope="col">Ação</th>
-                            </tr>
-                        </thead>
+                    <div class="table-responsive-sm">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Imagens</th>
+                                    <th style="text-align: center;" scope="col">Ação</th>
+                                </tr>
+                            </thead>
 
-                        <?php
+                            <?php
      include 'conexao.php';
      $sql = "SELECT * FROM `img` ";
      $busca  = mysqli_query($conexao, $sql);
@@ -178,20 +182,21 @@ $id = $pega['idUser'];
      	$idImg = $array['idImg'];
      	$caminho = $array['caminho'];
      ?>
-                        <tr>
-                            <td><img src="uploads/<?php echo $caminho; ?>" class="img-responsive" alt="Setif"
-                            style="width:100%; height: 100%;"></td>
-                            <td style="text-align: center;">
-                                <a class="btn btn-danger bt-sm" style="color: #FFF;"
-                                    href="deletarImagem.php?id=<?php echo $idImg ?>" role="button"
-                                    onclick="return confirm('Deseja mesmo Excluir?');"><i
-                                        class="far fa-trash-alt"></i>&nbsp;Excluir</a>
-                            </td>
-                        </tr>
-                        <?php } ?>
+                            <tr>
+                                <td><img src="uploads/<?php echo $caminho; ?>" class="img-responsive" alt="Setif"
+                                        style="width:100%; height: 100%;"></td>
+                                <td style="text-align: center;">
+                                    <a class="btn btn-danger bt-sm" style="color: #FFF; margin-top: 60px;"
+                                        href="deletarImagem.php?id=<?php echo $idImg ?>" role="button"
+                                        onclick="return confirm('Deseja mesmo Excluir?');"><i
+                                            class="far fa-trash-alt"></i>&nbsp;Excluir</a>
+                                </td>
+                            </tr>
+                            <?php } ?>
 
 
-                    </table>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

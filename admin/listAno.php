@@ -76,6 +76,7 @@ $id = $pega['idUser'];
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Cadastros</h6>
+                        <a class="collapse-item" href="cadastro.php">Usuário</a>
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
@@ -143,15 +144,16 @@ $id = $pega['idUser'];
                             <li class="breadcrumb-item active" aria-current="page">listAno</li>
                         </ol>
                     </div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Ano</th>
-                                <th style="text-align: center;" scope="col">Ação</th>
-                            </tr>
-                        </thead>
+                    <div class="table-responsive-sm">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Ano</th>
+                                    <th style="text-align: center;" scope="col">Ação</th>
+                                </tr>
+                            </thead>
 
-                        <?php
+                            <?php
      include 'conexao.php';
      $sql = "SELECT * FROM `ano` ";
      $busca  = mysqli_query($conexao, $sql);
@@ -160,22 +162,23 @@ $id = $pega['idUser'];
      	$idAno = $array['idAno'];
      	$ano = $array['ano'];
      ?>
-                        <tr>
-                            <td><?php echo $ano ?></td>
-                            <td style="text-align: center;"><a class="btn btn-warning bt-sm" style="color: #FFF;"
-                                    href="editarAno.php?id=<?php echo $idAno ?>" role="button"
-                                    onclick="return confirm('Deseja mesmo Editar?');"><i
-                                        class="far fa-edit"></i>&nbsp;Editar</a>
-                                <a class="btn btn-danger bt-sm" style="color: #FFF;"
-                                    href="deletarAno.php?id=<?php echo $idAno ?>" role="button"
-                                    onclick="return confirm('Deseja mesmo Excluir?');"><i
-                                        class="far fa-trash-alt"></i>&nbsp;Excluir</a>
-                            </td>
-                        </tr>
-                        <?php } ?>
+                            <tr>
+                                <td><?php echo $ano ?></td>
+                                <td style="text-align: center;"><a class="btn btn-warning bt-sm" style="color: #FFF;"
+                                        href="editarAno.php?id=<?php echo $idAno ?>" role="button"
+                                        onclick="return confirm('Deseja mesmo Editar?');"><i
+                                            class="far fa-edit"></i>&nbsp;Editar</a>
+                                    <a class="btn btn-danger bt-sm" style="color: #FFF;"
+                                        href="deletarAno.php?id=<?php echo $idAno ?>" role="button"
+                                        onclick="return confirm('Deseja mesmo Excluir?');"><i
+                                            class="far fa-trash-alt"></i>&nbsp;Excluir</a>
+                                </td>
+                            </tr>
+                            <?php } ?>
 
 
-                    </table>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

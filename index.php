@@ -16,6 +16,9 @@
     img {
         max-width: 100%;
         height: auto;
+        /* position: relative;
+        left: 125px; */
+        
     }
 
     p {
@@ -56,7 +59,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+            <div class="collapse navbar-collapse" id="navbarsExample10">
                 <ul class="navbar-nav">
                     <li class="nav-item activate">
                         <a class="nav-link active" href="index.php">Apresentação</a>
@@ -86,18 +89,21 @@
             </div>
         </nav>
     </div>
+    <div class="container" style="margin-top: 20px;">
     <article style="margin-top: 40px;">
-        <h2 class="text-center">Sobre o evento</h2>
+        <h2 class="text-left">Sobre o evento</h2>
         <hr class="mt-2 mb-5">
-        <p><span style="font-weight: 400;">A Semana da Tecnologia da Informação do IFPR Campus Paranavaí
+        <p class="text-left"><span style="font-weight: 400;">A Semana da Tecnologia da Informação do IFPR Campus Paranavaí
                 (SETIF) é um evento que acontece todos os anos na cidade de Paranavaí-PR. Além da mostra de
-                trabalhos, este evento conta com minicursos, palestras e competições. Neste ano, a SETIF ocorrerá no
-                período de 08 a 10 de outubro.</span></p>
-        <p>As inscrições para as palestras e mini-cursos devem ser realizadas por meio do Even3:&nbsp;<a
-                href="https://www.even3.com.br/setif2019/">https://www.even3.com.br/setif2019/</a></p>
-        <h2 class="text-center">Parceiros</h2>
-        <div class="container">
+                trabalhos, este evento conta com minicursos, palestras e competições. Neste ano, a SETIF ocorrerá nos
+                dias 06,07 e 08 de outubro .</span></p>
+        <p class="text-left">As inscrições para as palestras e mini-cursos devem ser realizadas por meio do Even3:&nbsp; Disponível em breve</p>
+        <hr class="mt-2 mb-5">
+        <h2 class="text-left"class="text-center">Parceiros</h2>
+        <hr class="mt-2 mb-5">
+       
             <div class="row">
+            <hr class="mt-2 mb-5">
                 <div class="col-6 col-md-4">
                     <p><img src="patrocinadores/apice.jpg" alt="Patrocinadores"></p>
                 </div>
@@ -135,20 +141,24 @@
                 <div class="col-6 col-md-4">
                     <p><img src="patrocinadores/suelen.png" alt="Patrocinadores"></p>
                 </div>
-            </div>
+            
             <div class="container" style="margin-top: 50px;">
-                <h2 class="text-center">Contato</h2>
+                <h2 class="text-left"class="text-center">Contato</h2>
+                <hr class="mt-2 mb-5">
                 <div class="paragraph">
-                    <p>e-mail: <a href="mailto:tads.paranavai@ifpr.edu.br"
+                    <p class="text-left">E-mail: <a href="mailto:tads.paranavai@ifpr.edu.br"
                             target="_blank"><b>es.paranavai@ifpr.edu.br</b></a></p>
+                    <hr class="mt-2 mb-5">
                 </div>
                 <div class="paragraph">
-                    <p><span style="color: #2a2a2a;">Datas: <b>08/10/2019 – 10/10/2019</b></span></p>
-                    <p><span style="color: #2a2a2a;">Local:&nbsp;</span><br>
+                    <p class="text-left"><span style="color: #2a2a2a;">Datas: <b>06/10/2020 – 08/10/2020 – 09/10/2020</b></span></p>
+                    <hr class="mt-2 mb-5">
+                    <p class="text-left"><span style="color: #2a2a2a;">Local:&nbsp;</span><br>
                         <span style="color: #2a2a2a;"><b>Rua José Felipe Tequinha, 1400</span><br>
                         <span style="color: #2a2a2a;">Paranavaí – PR</b></span></p>
+                    <hr class="mt-2 mb-5">
                 </div>
-                <p><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fqwdvVntBxHcEZ90cnGGgP8cfkZKoI-e"
+                <p class="text-left"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fqwdvVntBxHcEZ90cnGGgP8cfkZKoI-e"
                         width="640" height="480"></iframe></p>
             </div>
     </article>

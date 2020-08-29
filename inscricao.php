@@ -33,7 +33,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+            <div class="collapse navbar-collapse" id="navbarsExample10">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Apresentação</a>
@@ -65,13 +65,14 @@
 </div>
 <div class="container" style="margin-top: 20px;">
     <article>
-    <h2 class="text-center">Submissão</h2>
-    <hr class="mt-2 mb-5">
-    <p>Os trabalhos devem ser submetidos por meio do Easy Chair:</span></p>
-<p><a href="https://easychair.org/conferences/?conf=setif2019">EasyChair for SETIF-2019</a></p>
+<h2 class="text">Inscrições para os Minicursos</h2>
+<hr class="mt-2 mb-5">
+<p class="text-left">As inscrições devem ser realizadas por meio do:&nbsp; Disponível em breve</p>
 <p>&nbsp;</p>
-<h2 class="text-center">Inscrições para os Minicursos</h2>
-<p>As inscrições devem ser realizadas por meio do&nbsp;<a href="https://www.even3.com.br/setif2019/">Even3</a></p>
+    <h2 class="text">Submissão</h2>
+    <hr class="mt-2 mb-5">
+    <p class="text-left">Os trabalhos devem ser submetidos por meio do:</span></p>
+<a class="text-left" href="https://easychair.org/conferences/?conf=setif2020"> EasyChair2020</a>
 <p>&nbsp;</p>
 </article>
 </div>

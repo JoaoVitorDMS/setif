@@ -37,7 +37,7 @@
                     </span>
                     <h2 class="display-5">Opa, parece que você não possui cadastro, ou digitou a senha errada T_T</h2>
                 <div style="text-align: right; margin-top:250px;">
-                    <b><p style="color: #000">Para tentar novamente<a href="cadastro.php" style="color: #228B22"> CLIQUE AQUI</a></p></b>
+                    <b><p style="color: #000">Para tentar novamente<a href="login.php" style="color: #228B22"> CLIQUE AQUI</a></p></b>
             </div>
                 </form>
             </div>

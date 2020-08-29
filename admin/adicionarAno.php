@@ -76,6 +76,7 @@ $id = $pega['idUser'];
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Cadastros</h6>
+                        <a class="collapse-item" href="cadastro.php">Usuário</a>
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item active" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
@@ -143,11 +144,10 @@ $id = $pega['idUser'];
                             <li class="breadcrumb-item active" aria-current="page">Ano</li>
                         </ol>
                     </div>
-                    <div class="container" style="width: 500px;margin-top: 20px">
                         <form action="_inserir_ano.php" method="post" style="margin-top: 20px">
                             <div class="form-group">
-                                <label>Ano</label>
-                                <input type="number" name="ano" class="form-control" placeholder="Insira o ano" required
+                                <b><label>Ano</label>
+                                <input type="number" name="ano" class="form-control" placeholder="Cadastre o ano" required
                                     autocomplete="off">
                             </div>
                             <div style="text-align: right;">
@@ -156,6 +156,7 @@ $id = $pega['idUser'];
                         </form>
                     </div>
                 </div>
+            </div>
             </div>
 			<footer class="sticky-footer bg-white">
                         <div class="container my-auto">

@@ -41,7 +41,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+            <div class="collapse navbar-collapse" id="navbarsExample10">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Apresentação</a>
@@ -74,75 +74,75 @@
     <div class="container" style="margin-top: 20px;">
         <article>
             <div class="entry-content clearfix">
-                <h2>Datas Importantes</h2>
+                <h2 class="text-left">Datas Importantes</h2>
                 <hr class="mt-2 mb-5">
-                <p style="font-weight: 400;"><strong>Data limite para a submissão de&nbsp;trabalhos:</strong> <del>02 de
-                        setembro de 2019</del><strong><span style="color: #ff0000;"> 09 de setembro de
-                            2019</span></strong><br>
-                    <strong>Notificação aos autores:</strong> <del>18 de setembro de 2019</del><strong><span
-                            style="color: #ff0000;"> 23 de setembro de 2019</span></strong><br>
-                    <strong>Submissão da versão final:</strong> <del>01&nbsp;de&nbsp;outubro de 2019</del><span
-                        style="color: #ff0000;"><strong> 03 de outubro de 2019</strong></span></p>
-                <p style="font-weight: 400;"><strong>Evento:</strong> 08 a 10 de&nbsp;outubro de 2019</p>
-                <h2>Submissão</h2>
-                <p><span style="font-weight: 400;">Os trabalhos devem ser submetidos por meio do Easy Chair:</span></p>
-                <p><a
-                        href="https://easychair.org/conferences/?conf=setif2019">https://easychair.org/conferences/?conf=setif2019&nbsp;</a>
+                <p class="text-left" style="font-weight: 400;"><strong>Data limite para a submissão de&nbsp;trabalhos:</strong><strong><span style="color: #ff0000;"> 17 de agosto de
+                            2020</span></strong><br>
+                    <strong>Notificação aos autores:</strong><strong><span
+                            style="color: #ff0000;"> 11 de setembro de 2020</span></strong><br>
+                    <strong>Submissão da versão final:</strong><span
+                        style="color: #ff0000;"><strong> 01 de outubro de 2020</strong></span></p>
+                <p class="text-left" style="font-weight: 400;"><strong>Evento:</strong> 06,07 e 08 de&nbsp;outubro de 2020</p>
+                <h2 class="text-left">Submissão</h2>
+                <p class="text-left"><span style="font-weight: 400;">Os trabalhos devem ser submetidos por meio do:</span></p>
+                <b><a class="text-left" href="https://easychair.org/conferences/?conf=setif2020"> EasyChair2020</a></b>
                 </p>
                 <p>&nbsp;</p>
-                <h2>Artigos Completos</h2>
-                <p><span style="font-weight: 400;">Os artigos completos devem possuir no máximo 12 páginas, sendo até 10
-                        páginas de texto e&nbsp;até 2&nbsp;páginas&nbsp;de&nbsp;referências.&nbsp;A formatação dos
+                <h2 class="text-left">Artigos Completos</h2>
+                <p class="text-left"><span style="font-weight: 400;">Os artigos completos devem possuir no máximo 12 páginas.&nbsp;A formatação dos
                         artigos deve seguir o modelo da SBC para artigos acadêmicos:</span></p>
-                <p><a
-                        href="https://drive.google.com/file/d/0B_jYjhszA34iSnE2SC1OV0dVNlU/view?usp=sharing">https://drive.google.com/file/d/0B_jYjhszA34iSnE2SC1OV0dVNlU/view?usp=sharing</a>
+                        <small><b>Utilizar preferencialmente o LaTeX: <a href="https://www.overleaf.com/">Overleaf</a> </small>
+                <p class="text-left"><a
+                        href="https://drive.google.com/file/d/0B_jYjhszA34iSnE2SC1OV0dVNlU/view?usp=sharing">Modelo SBC-Artigo</b></a>
                 </p>
                 <p>&nbsp;</p>
-                <h2>Resumos</h2>
-                <p><span style="font-weight: 400;">O corpo do texto do resumo deve ter entre 2 a 3 páginas mais
-                        referências (obrigatório). Os resumos devem estar formatadas de acordo com o seguinte modelo,
-                        que é baseado no modelo da SBC:</span></p>
-                <p><a
-                        href="https://drive.google.com/file/d/1TynchfNXbA9s7D45vYHh176xOfZ7rTRy/view?usp=sharing">https://drive.google.com/file/d/1TynchfNXbA9s7D45vYHh176xOfZ7rTRy/view?usp=sharing</a>
+                <h2 class="text-left">Resumos</h2>
+                <p class="text-left"><span style="font-weight: 400;">O corpo do texto do resumo deve ter 3 páginas mais
+                        referências (obrigatório). Os resumos devem estar também formatados de acordo com o modelo da SBC:</span></p>
+                        <small><b>Utilizar preferencialmente o LaTeX: <a href="https://www.overleaf.com/">Overleaf</a></small><br>
+                        <small><b>Não incluir abstract e o resumo no modelo latex</b></small>
+                <p class="text-left"><a
+                        href="https://drive.google.com/file/d/1TynchfNXbA9s7D45vYHh176xOfZ7rTRy/view?usp=sharing">Modelo SBC-Resumo</b></a>
                 </p>
                 <p>&nbsp;</p>
-                <p style="font-weight: 400;"><strong>Revisão Duplo-Cega por Pares</strong></p>
-                <p style="font-weight: 400;">Neste evento utilizaremos o método de revisão duplo-cega por pares. Isso
+                <h2 class="text-left">Revisão Duplo-Cega por Pares</h2>
+                <p class="text-left" style="font-weight: 400;">Neste evento utilizaremos o método de revisão duplo-cega por pares. Isso
                     significa que, durante o processo de revisão, os revisores não terão conhecimento sobre a identidade
                     dos autores e nem os autores saberão quem são os revisores. Para possibilitar que essa regra seja
                     seguida, os autores devem garantir que suas identidades não podem ser facilmente determinadas.
                     Trabalhos em que não houver um cuidado com isso poderão ser automaticamente rejeitados antes da
                     revisão. Sendo assim, as seguintes recomendações devem ser seguidas:</p>
               
-                    <ul style="font-weight: 400;"><b style="color: #ff0000;">Omitir os nomes dos autores no título do trabalho;</b></ul>
-                    <ul style="font-weight: 400;"><b style="color: #ff0000;">Referenciar seus próprios trabalhos em terceira pessoa;</b></ul>
-                    <ul style="font-weight: 400;"><b style="color: #ff0000;">Não fornecer links para materiais externos que possam identificar
+                    <ul class="text-left" style="font-weight: 400;"><b style="color: #ff0000;">Omitir os nomes dos autores no título do trabalho;</b></ul>
+                    <ul class="text-left" style="font-weight: 400;"><b style="color: #ff0000;">Referenciar seus próprios trabalhos em terceira pessoa;</b></ul>
+                    <ul class="text-left" style="font-weight: 400;"><b style="color: #ff0000;">Não fornecer links para materiais externos que possam identificar
                         algum dos autores.</b></ul>
                
-                <h2>Apresentação</h2>
-                <p>Os trabalhos aceitos deverão ser apresentados na SETIF 2019. Os trabalhos deverão ser apresentados na
-                    forma de apresentação oral. Mais&nbsp;detalhes sobre a agenda de apresentações serão divulgados após
+                <h2 class="text-left">Apresentação</h2>
+                <p class="text-left">Os trabalhos aceitos deverão ser apresentados na SETIF 2020. Os trabalhos deverão ser apresentados na
+                    forma de apresentação oral online via Google Meets. Mais&nbsp;detalhes sobre a agenda de apresentações serão divulgados após
                     a revisão dos trabalhos submetidos.</p>
-                <p>O tempo de apresentação será de:</p>
-                <p style="color: #ff0000;"><b>– 10 minutos para resumos<br>
+                <!-- <p class="text-left">O tempo de apresentação será de:</p>
+                <p class="text-left" style="color: #ff0000;"><b>– 10 minutos para resumos<br>
                     – 15 minutos para artigos completos</p>
-                <p style="color: #ff0000;"><b>Haverá ainda 5 minutos para arguição em ambas modalidades.</p>
+                <p class="text-left" style="color: #ff0000;"><b>Haverá ainda 5 minutos para arguição em ambas modalidades.</p> -->
                 <p>&nbsp;</p>
-                <h2>Tópicos de Interesse</h2>
-                <h6 class="text-center">Alguns tópicos de interesse da SETIF 2019 são (mas não se limitam a estes):
+                <h2 class="text-left">Tópicos de Interesse</h2>
+                <h6 class="text-left">Alguns tópicos de interesse da SETIF 2019 são (mas não se limitam a estes):
                 </h6>
-                    <ul style="color: #ff0000;"><b>Arquitetura de Computadores</b></ul>
-                    <ul style="color: #ff0000;"><b>Automação e Robótica</b></ul>
-                    <ul style="color: #ff0000;"><b>Banco de Dados</b></ul>
-                    <ul style="color: #ff0000;"><b>Engenharia de Software</b></ul>
-                    <ul style="color: #ff0000;"><b>Ferramentas Computacionais</b></ul>
-                    <ul style="color: #ff0000;"><b>Informática na Educação</b></ul>
-                    <ul style="color: #ff0000;"><b>Inteligência Artificial</b></ul>
-                    <ul style="color: #ff0000;"><b>Interação Humano-Computador</b></ul>
-                    <ul style="color: #ff0000;"><b>Redes e Sistemas Distribuídos</b></ul>
-                    <ul style="color: #ff0000;"><b>Sistemas Operacionais</b></ul>
-                    <ul style="color: #ff0000;"><b>Sistemas de Informação</b></ul>
-
+                <ol class="text-left">
+                    <li style="color: #ff0000;"><b>Arquitetura de Computadores</b></li>
+                    <li style="color: #ff0000;"><b>Automação e Robótica</b></li>
+                    <li style="color: #ff0000;"><b>Banco de Dados</b></li>
+                    <li style="color: #ff0000;"><b>Engenharia de Software</b></li>
+                    <li style="color: #ff0000;"><b>Ferramentas Computacionais</b></li>
+                    <li style="color: #ff0000;"><b>Informática na Educação</b></li>
+                    <li style="color: #ff0000;"><b>Inteligência Artificial</b></li>
+                    <li style="color: #ff0000;"><b>Interação Humano-Computador</b></li>
+                    <li style="color: #ff0000;"><b>Redes e Sistemas Distribuídos</b></li>
+                    <li style="color: #ff0000;"><b>Sistemas Operacionais</b></li>
+                    <li style="color: #ff0000;"><b>Sistemas de Informação</b></li>
+                </ol>
                 <!-- <p>
 
 <p style="font-weight: 400;"><strong> </strong></p>
