@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lan="pt-br">
 
 <head>
     <title>Login</title>

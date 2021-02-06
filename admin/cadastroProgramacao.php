@@ -21,7 +21,7 @@ $conta = mysqli_num_rows($busca);
 
 if($conta > 0){
 }else{
-    session_destroy();
+        session_destroy();
     session_unset();
     header("Location: login?erro=usuario-invalido");
     exit();
@@ -41,10 +41,11 @@ $id = $pega['idUser'];
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="images/ifpr.png" rel="icon">
-    <title>Admin</title>
+    <title>Admin- CadastroProgramação</title>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/ruang-admin.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="css/style.css" href="styles.css">
 </head>
 
 <body id="page-top">
@@ -57,7 +58,7 @@ $id = $pega['idUser'];
                 </div>
             </a>
             <hr class="sidebar-divider my-0">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>inicio</span></a>
@@ -66,7 +67,7 @@ $id = $pega['idUser'];
             <div class="sidebar-heading">
                 Paginas
             </div>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
                     aria-expanded="true" aria-controls="collapseBootstrap">
                     <i class="fas fa-keyboard"></i>
@@ -80,7 +81,7 @@ $id = $pega['idUser'];
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
-                        <a class="collapse-item" href="cadastroPalestra.php">Palestra</a>
+                        <a class="collapse-item active" href="cadastroProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>
@@ -100,7 +101,7 @@ $id = $pega['idUser'];
                         <a class="collapse-item" href="listarTrab">Listar Trabalhos</a>
                         <a class="collapse-item" href="listAno.php">Anos</a>
                         <a class="collapse-item" href="listImagem.php">Imagens</a>
-                        <a class="collapse-item" href="listaPalestra.php">Palestras</a>
+                        <a class="collapse-item" href="listaProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>
@@ -135,63 +136,29 @@ $id = $pega['idUser'];
                         </li>
                     </ul>
                 </nav>
-                <!-- Topbar -->
-
-                <!-- Container Fluid-->
                 <div class="container-fluid" id="container-wrapper">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Inicio</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Programação</h1>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="./">Inicio</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                            <li class="breadcrumb-item"><a href="index">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Programação</li>
                         </ol>
                     </div>
-                    <div style="margin-top: 50px;">
-                 <h2 class="text-center">Olá <?php echo $nome ?>, bem vindo a área administrativa da SETIF.</h2>
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col">
-    <div class="card text-white bg-danger">
-      <div class="card-body">
-        <h5 class="card-title">Ano</h5>
-        <p class="card-text">Cadastrar o ano de realização da SETIF.</p>
-        <a href="adicionarAno.php" class="btn btn-dark text-white">Ano</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card text-white bg-primary">
-      <div class="card-body">
-        <h5 class="card-title">Trabalho</h5>
-        <p class="card-text">Cadastrar trabalhos da SETIF.</p>
-        <a href="cadastroTrab.php" class="btn btn-dark text-white">Trabalho</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card text-white bg-success">
-      <div class="card-body">
-        <h5 class="card-title">Imagem</h5>
-        <p class="card-text">Cadastrar imagens do evento.</p>
-        <a href="adicionarImagem.php" class="btn btn-dark text-white">Imagem</a>
-      </div>
-    </div>
-  </div>
-   <div class="col">
-    <div class="card text-white bg-warning">
-      <div class="card-body">
-        <h5 class="card-title">Programação</h5>
-        <p class="card-text">Cadastrar a programação do evento.</p>
-        <a href="cadastroProgramacao.php" class="btn btn-dark text-white">Programação</a>
-      </div>
-    </div>
-  </div>
-</div>
-                 </div>
-        <!---Container Fluid-->
-    </div>
-    <!-- Footer -->
-    </div>
-    <footer class="sticky-footer bg-white">
+                    <div style="text-align: center;">
+                        <h4>Construir Programação</h4>
+                    </div>
+                    <form action="inserirProgramacao.php" method="post">
+                        <div class="form-group">
+                        <textarea name="txtCK" id="txtCK"></textarea>
+                        </div>
+                        <div style="text-align: right;">
+                            <button type="submit" class="btn btn-sm btn-primary">Cadastrar</button>
+                        </div>
+                </div>
+                </form>
+
+            </div>
+            <footer class="sticky-footer bg-white">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
                 <span>copyright &copy; <script>
@@ -210,7 +177,82 @@ $id = $pega['idUser'];
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+<script src="vendor/ckeditor/build/ckeditor.js"></script>
+    <script>ClassicEditor
+            .create(document.querySelector('#txtCK'), {
 
+                toolbar: {
+                    items: [
+                        'heading',
+                        '|',
+                        'bold',
+                        'italic',
+                        'link',
+                        'bulletedList',
+                        'numberedList',
+                        '|',
+                        'indent',
+                        'outdent',
+                        '|',
+                        'imageUpload',
+                        'blockQuote',
+                        'insertTable',
+                        'mediaEmbed',
+                        'undo',
+                        'redo',
+                        'alignment',
+                        'exportPdf',
+                        'exportWord',
+                        'fontBackgroundColor',
+                        'fontColor',
+                        'fontFamily',
+                        'fontSize',
+                        'highlight',
+                        'horizontalLine',
+                        'htmlEmbed',
+                        'imageInsert',
+                        'pageBreak',
+                        'specialCharacters'
+                    ]
+                },
+                language: 'pt-br',
+                image: {
+                    toolbar: [
+                        'imageTextAlternative',
+                        'imageStyle:full',
+                        'imageStyle:side'
+                    ]
+                },
+                table: {
+                    contentToolbar: [
+                        'tableColumn',
+                        'tableRow',
+                        'mergeTableCells',
+                        'tableCellProperties',
+                        'tableProperties'
+                    ]
+                },
+                licenseKey: '',
+
+            })
+            .then(editor => {
+                window.editor = editor;
+
+
+
+
+
+
+
+
+            })
+            .catch(error => {
+                console.error('Oops, something went wrong!');
+                console.error('Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:');
+                console.warn('Build id: 9ydsd9pharbf-eo5jz7yo8usj');
+                console.error(error);
+            });
+    </script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>

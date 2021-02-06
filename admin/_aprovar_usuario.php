@@ -10,7 +10,7 @@ if($nivel == 1){
 	$update = "UPDATE `usuario` SET status = 'Ativo', nivelUser = 1 WHERE idUser = $id";
 	$sql = mysqli_query($conexao,$update);
 }
-//funcionário
+//professor
 if($nivel == 2){
 
 	$update = "UPDATE `usuario` SET status = 'Ativo', nivelUser = 2 WHERE idUser = $id";
@@ -18,4 +18,4 @@ if($nivel == 2){
 	
 }
 header("Location:aprovarUsuarios.php");
-?>
+?> 

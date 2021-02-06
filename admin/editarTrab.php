@@ -33,7 +33,7 @@ $id = $pega['idUser'];
 $id = $_GET['id'];
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -81,6 +81,7 @@ $id = $_GET['id'];
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
+                        <a class="collapse-item" href="cadastroProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>
@@ -100,6 +101,7 @@ $id = $_GET['id'];
                         <a class="collapse-item active" href="listarTrab">Listar Trabalhos</a>
                         <a class="collapse-item" href="listAno.php">Anos</a>
                         <a class="collapse-item" href="listImagem.php">Imagens</a>
+                        <a class="collapse-item" href="listaProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>

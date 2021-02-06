@@ -21,7 +21,7 @@ $conta = mysqli_num_rows($busca);
 
 if($conta > 0){
 }else{
-    session_destroy();
+        session_destroy();
     session_unset();
     header("Location: login?erro=usuario-invalido");
     exit();
@@ -41,7 +41,7 @@ $id = $pega['idUser'];
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="images/ifpr.png" rel="icon">
-    <title>Admin</title>
+    <title>Admin- Programações</title>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/ruang-admin.min.css" rel="stylesheet">
@@ -57,7 +57,7 @@ $id = $pega['idUser'];
                 </div>
             </a>
             <hr class="sidebar-divider my-0">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-home"></i>
                     <span>inicio</span></a>
@@ -80,7 +80,7 @@ $id = $pega['idUser'];
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
-                        <a class="collapse-item" href="cadastroPalestra.php">Palestra</a>
+                        <a class="collapse-item" href="cadastroProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>
@@ -88,7 +88,7 @@ $id = $pega['idUser'];
             <div class="sidebar-heading">
                 Tabelas
             </div>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable"
                     aria-expanded="true" aria-controls="collapseTable">
                     <i class="fas fa-fw fa-table"></i>
@@ -97,10 +97,10 @@ $id = $pega['idUser'];
                 <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Listas</h6>
-                        <a class="collapse-item" href="listarTrab">Listar Trabalhos</a>
+                        <a class="collapse-item" href="listarTrab.php">Trabalhos</a>
                         <a class="collapse-item" href="listAno.php">Anos</a>
                         <a class="collapse-item" href="listImagem.php">Imagens</a>
-                        <a class="collapse-item" href="listaPalestra.php">Palestras</a>
+                        <a class="collapse-item active" href="listaProgramacao.php">Programação</a> 
                     </div>
                 </div>
             </li>
@@ -140,56 +140,114 @@ $id = $pega['idUser'];
                 <!-- Container Fluid-->
                 <div class="container-fluid" id="container-wrapper">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Inicio</h1>
+                        <h1 class="h3 mb-0 text-gray-800">lista de palestras</h1>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="./">Inicio</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                            <li class="breadcrumb-item active" aria-current="page">listaPalestra</li>
                         </ol>
                     </div>
-                    <div style="margin-top: 50px;">
-                 <h2 class="text-center">Olá <?php echo $nome ?>, bem vindo a área administrativa da SETIF.</h2>
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col">
-    <div class="card text-white bg-danger">
-      <div class="card-body">
-        <h5 class="card-title">Ano</h5>
-        <p class="card-text">Cadastrar o ano de realização da SETIF.</p>
-        <a href="adicionarAno.php" class="btn btn-dark text-white">Ano</a>
-      </div>
+                    <div class="table-responsive-sm">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Programação</th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;Editar</th>
+                                    <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;Excluir</th>
+                                </tr>
+                            </thead>
+
+                            <?php
+     include 'conexao.php';
+     $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : 1;
+     $sql = "SELECT * FROM `programacao` ORDER BY idPro";
+     $busca  = mysqli_query($conexao, $sql);
+     $totalDado = mysqli_num_rows($busca);
+
+     $quantidadePag = 15;
+
+     $numPag = ceil($totalDado/$quantidadePag);
+
+     $inicio = ($quantidadePag * $pagina)-$quantidadePag;
+
+     $resu = "SELECT * FROM `programacao` ORDER BY idPro ASC  LIMIT $inicio, $quantidadePag";
+
+     $resultado = mysqli_query($conexao,$resu);
+     $totalDado = mysqli_num_rows($resultado);
+     if($totalDado > 0){
+
+    }else{
+        echo '<center><h4 class="display-2">Nenhum resultado encontrado</h4></center>';
+    }
+     while ($array = mysqli_fetch_array($resultado)) {
+     	$id = $array['idPro'];
+     	$programacao = $array['programacao'];
+     ?>
+                            <tr>
+                                <td><?php echo html_entity_decode($programacao); ?></td>
+                                <td><?php echo $id ?></td>
+                                <td><a class="btn btn-warning bt-sm" style="color: #FFF;"
+                                        href="editarProgramacao.php?id=<?php echo $id ?>" role="button"
+                                        onclick="return confirm('Deseja mesmo Editar?');"><i
+                                            class="far fa-edit"></i>&nbsp;Editar</a></td>
+                                <td><a class="btn btn-danger bt-sm" style="color: #FFF;"
+                                        href="deletarProgramacao.php?id=<?php echo $id ?>" role="button"
+                                        onclick="return confirm('Deseja mesmo Excluir?');"><i
+                                            class="far fa-trash-alt"></i>&nbsp;Excluir</a>
+                                </td>
+                            </tr>
+                            <?php } ?>
+                        </table>
+                    </div>
+                    <?php
+                    $paginaAnterior = $pagina-1;
+                    $paginaPosterior = $pagina+1;
+                    
+                    ?>
+                    <div style="margin-top: 10px;">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center pagination-mg">
+                                <li class="page-item">
+                                    <?php
+        if($paginaAnterior != 0){ ?>
+                                    <a class="page-link" style="background-color: #32CD32;color: white "
+                                        href="listarTrab.php?pagina=<?php echo $paginaAnterior; ?>"
+                                        aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                    <?php } else{ ?>
+                                    <span class="page-link" style="background-color: #32CD32;color: white "
+                                        aria-hidden="true">&laquo;</span>
+                                    <?php }?>
+                                </li>
+                                <?php
+    for($i = 1; $i < $numPag +1; $i++){ ?>
+                                <li class="page-item"><a class="page-link"
+                                        style="background-color: #32CD32;color: white "
+                                        href="listarTrab.php?pagina=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+
+                                <?php } ?>
+                                <li class="page-item">
+                                    <?php
+        if($paginaPosterior <= $numPag){ ?>
+                                    <a class="page-link" style="background-color: #32CD32;color: white "
+                                        href="listarTrab.php?pagina=<?php echo $paginaPosterior; ?>"" aria-label="
+                                        Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                    <?php } else{ ?>
+                                    <span class="page-link" style="background-color: #32CD32;color: white "
+                                        aria-hidden="true">&raquo;</span>
+                                    <?php }?>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card text-white bg-primary">
-      <div class="card-body">
-        <h5 class="card-title">Trabalho</h5>
-        <p class="card-text">Cadastrar trabalhos da SETIF.</p>
-        <a href="cadastroTrab.php" class="btn btn-dark text-white">Trabalho</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card text-white bg-success">
-      <div class="card-body">
-        <h5 class="card-title">Imagem</h5>
-        <p class="card-text">Cadastrar imagens do evento.</p>
-        <a href="adicionarImagem.php" class="btn btn-dark text-white">Imagem</a>
-      </div>
-    </div>
-  </div>
-   <div class="col">
-    <div class="card text-white bg-warning">
-      <div class="card-body">
-        <h5 class="card-title">Programação</h5>
-        <p class="card-text">Cadastrar a programação do evento.</p>
-        <a href="cadastroProgramacao.php" class="btn btn-dark text-white">Programação</a>
-      </div>
-    </div>
-  </div>
-</div>
-                 </div>
-        <!---Container Fluid-->
-    </div>
-    <!-- Footer -->
     </div>
     <footer class="sticky-footer bg-white">
         <div class="container my-auto">
@@ -203,9 +261,6 @@ $id = $pega['idUser'];
         </div>
     </footer>
     <!-- Footer -->
-    </div>
-    </div>
-
     <!-- Scroll to top -->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>

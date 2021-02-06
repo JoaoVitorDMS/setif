@@ -32,7 +32,7 @@ $nome = $pega['nameUser'];
 $id = $pega['idUser'];
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -80,6 +80,7 @@ $id = $pega['idUser'];
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item active" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
+                        <a class="collapse-item" href="cadastroProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>
@@ -99,6 +100,7 @@ $id = $pega['idUser'];
                         <a class="collapse-item" href="listarTrab">Listar Trabalhos</a>
                         <a class="collapse-item" href="listAno.php">Anos</a>
                         <a class="collapse-item" href="listImagem.php">Imagens</a>
+                        <a class="collapse-item" href="listaProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>

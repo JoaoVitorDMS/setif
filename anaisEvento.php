@@ -61,7 +61,19 @@
         <div class="container" style="margin-top: 20px;">
         <article class="text-left" style="margin-top: 40px;">
             <div>
-                <h2  style="margin-top: 20px;">Edição Atual</h2>
+             <?php
+     include 'conexao.php';
+     $sql = "SELECT * FROM `ano` ORDER BY `ano` desc ";
+     $busca  = mysqli_query($conexao, $sql);
+
+     while ($array = mysqli_fetch_array($busca)) {
+     	$idAno = $array['idAno'];
+     	$ano = $array['ano'];
+     ?>
+     <h2 class="display-4" style="margin-top: 20px; font-size: 30px;"><a href="evento.php?ano=<?php echo $ano ?>">Anais <?php echo $ano ?></a></h2>
+     <hr class="mt-2 mb-5">
+     <?php } ?>
+                <!-- <h2  style="margin-top: 20px;">Edição Atual</h2>
                 <hr class="mt-2 mb-5">
                 <p><a href="anaisEvento2020.php">Anais do Evento 2020</a></p>
                 <hr class="mt-2 mb-5">
@@ -74,7 +86,7 @@
                 <p><a href="anaisEvento2017.php">Anais do Evento 2017</a></p>
                 <hr class="mt-2 mb-5">
                 <p><a href="anaisEvento2016.php">Anais do Evento 2016</a></p>
-                <hr class="mt-2 mb-5">
+                <hr class="mt-2 mb-5"> -->
             </div>
         </article>
         </div>

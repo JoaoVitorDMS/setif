@@ -1,3 +1,6 @@
+<?php
+$ano = $_GET['ano'];
+?>
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="img/ifpr.png" rel="icon">
-    <title>Programação</title>
+    <title>Anais Evento</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -29,7 +32,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarsExample10">
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Apresentação</a>
@@ -37,8 +40,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="inscricao.php">Inscrições</a>
                     </li>
-                    <li class="nav-item activate">
-                        <a class="nav-link active" href="programacao.php">Programação</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programacao.php">Programação</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ensalamento.php">Ensalamento</a>
@@ -46,8 +49,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="normasPublicacao.php">Normas de Publicação</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="anaisEvento.php">Anais Eventos</a>
+                    <li class="nav-item activate">
+                        <a class="nav-link active" href="anaisEvento.php">Anais Eventos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="corpoEditorial.php">Corpo Editorial</a>
@@ -58,31 +61,40 @@
                 </ul>
             </div>
         </nav>
-    </div>
     <div class="container">
-        <article style="margin-top: 40px;">
-                   <?php
+        <div class="row">
+        <div style = "margin-top: 40px;">
+        <h3 class="display-2">Anais evento <?php echo $ano ?></h3>
+        <hr class="mt-2 mb-5">
+        <?php
         include 'conexao.php';
-        $sql = "SELECT * FROM `programacao`";
+        $ano = $_GET['ano'];
+        $sql = "SELECT * FROM `trabalho` WHERE ano = '$ano' ORDER BY idTrab, tipo='Artigo' DESC";
         $busca = mysqli_query($conexao, $sql);
         $total = mysqli_num_rows($busca);
         if($total > 0){
 
         }else{
-            echo '<div style="text-align: center;"><p>Nenhuma programação encontrada ;-;</p></div>';
+            echo '<div style="text-align: center;"><p>Nenhum artigo encontrado ;-;</p></div>';
         }
         while($array = mysqli_fetch_array($busca)){
-            $programacao = $array['programacao'];
-
+            $idTrab = $array['idTrab'];
+            $titulo = $array['titulo'];
+            $autores = $array['autores'];
+            $link = $array['link'];
+            $ano = $array['ano'];
+            $tipo = $array['tipo'];
         ?>
         <div class="container">
         <div class="row">
-        <?php echo html_entity_decode($programacao); ?>
+        <p style="margin-top: 20px;"><a href="<?php echo $link ?>"><?php echo utf8_encode($titulo); ?></a><br>
+        <span><?php echo utf8_encode($autores); ?></span></p>
         </div>
         </div>
         <?php } ?>
-        </article>
-    </div>
+      </div>
+      </div>
+      </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

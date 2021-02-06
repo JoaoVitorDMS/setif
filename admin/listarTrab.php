@@ -32,7 +32,7 @@ $nome = $pega['nameUser'];
 $id = $pega['idUser'];
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -80,6 +80,7 @@ $id = $pega['idUser'];
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
+                        <a class="collapse-item" href="cadastroProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>
@@ -99,6 +100,7 @@ $id = $pega['idUser'];
                         <a class="collapse-item active" href="listarTrab.php">Trabalhos</a>
                         <a class="collapse-item" href="listAno.php">Anos</a>
                         <a class="collapse-item" href="listImagem.php">Imagens</a>
+                        <a class="collapse-item" href="listaProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>
@@ -188,8 +190,8 @@ $id = $pega['idUser'];
         $tipo = $array['tipo'];
      ?>
                             <tr>
-                                <td><?php echo $nameAutor ?></td>
-                                <td><?php echo $titulo ?></td>
+                                <td><?php echo utf8_encode($nameAutor); ?></td>
+                                <td><?php echo utf8_encode($titulo); ?></td>
                                 <td><?php echo $ano ?></td>
                                 <td><?php echo $tipo ?></td>
                                 <td><a class="btn btn-warning bt-sm" style="color: #FFF;"

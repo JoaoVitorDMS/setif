@@ -56,12 +56,10 @@
     if (isset($_POST['ano'])) {
     $_SESSION['ano'] = $_POST['ano'];
     }
-    if (isset($_POST['tipo'])) {
-    $_SESSION['tipo'] = $_POST['tipo'];
-    }
     $ano = $_SESSION['ano'];
-    $tipo = $_SESSION['tipo'];
-    $sql = "SELECT * FROM `texto` WHERE ano = '". $_SESSION['ano']."' AND tipo = '". $_SESSION['tipo']."' ORDER BY idTrab DESC";
+    // SELECT * FROM `trabalho` WHERE ano = '2019' ORDER BY idTrab, tipo='Artigo' DESC
+
+    $sql = "SELECT * FROM `trabalho` WHERE ano = '". $_SESSION['ano']."' ORDER BY idTrab, tipo='Artigo' DESC";
     $busca  = mysqli_query($conexao, $sql);
 
     $totalDado = mysqli_num_rows($busca);
@@ -72,7 +70,7 @@
 
     $inicio = ($quantidadePag * $pagina)-$quantidadePag;
 
-    $resu = "SELECT * FROM `texto` WHERE ano = '". $_SESSION['ano']."' AND tipo = '". $_SESSION['tipo']."' ORDER BY idTrab DESC  LIMIT $inicio, $quantidadePag";
+    $resu = "SELECT * FROM `trabalho` WHERE ano = '". $_SESSION['ano']."' ORDER BY idTrab, tipo='Artigo' DESC  LIMIT $inicio, $quantidadePag";
 
     $resultado = mysqli_query($conexao,$resu);
     $totalDado = mysqli_num_rows($resultado);
