@@ -194,10 +194,8 @@ $id = $pega['idUser'];
                         'indent',
                         'outdent',
                         '|',
-                        'imageUpload',
                         'blockQuote',
                         'insertTable',
-                        'mediaEmbed',
                         'undo',
                         'redo',
                         'alignment',
@@ -210,7 +208,6 @@ $id = $pega['idUser'];
                         'highlight',
                         'horizontalLine',
                         'htmlEmbed',
-                        'imageInsert',
                         'pageBreak',
                         'specialCharacters'
                     ]

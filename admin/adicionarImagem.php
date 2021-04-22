@@ -139,42 +139,62 @@ $id = $pega['idUser'];
                 <!-- Topbar -->
 
                 <!-- Container Fluid-->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Imagens</h1>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="./">Inicio</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Imagem</li>
-                    </ol>
-                </div>
-                <div class="container">
-                    <form enctype="multipart/form-data" action="" method="post">
-                        <div class="input-group mb-3">
-                            <input type="file" name="arquivo[]" class="form-control" accept="image/*" multiple>
+                <div class="container-fluid" id="container-wrapper">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Cadastro de fotos do evento</h1>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="./">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Ano</li>
+                        </ol>
+                    </div>
+                <div class="container-fluid" id="container-wrapper">
+                <center>
+                    <form enctype="multipart/form-data" method="post">
+                            <div class="form-group">
+                                <label>Ano</label>
+                            <select class="form-control col-2" name="ano" required>
+                                <option selected disabled value="0">Selecione.</option>
+                                <?php
+                          include 'conexao.php';
+                         $sql = "SELECT * FROM ano ORDER BY idAno DESC";
+                         $buscar = mysqli_query($conexao,$sql);
+                          while ($array = mysqli_fetch_array($buscar)) {
+                            $idAno = $array['idAno'];
+                            $ano = $array['ano'];
+                            ?>
+                                <option><?php echo $ano ?></option>
+                                <?php } ?>
+                            </select>
+                            </div>
+                        <div class="input-group col-8">
+                            <input type="file" name="arquivo[]" class="form-control col-12" accept="image/*" multiple>
                             <div class="input-group-append">
                                 <button type="submit" class="btn  btn-primary">Upload</button>
                             </div>
                         </div>
                     </form>
+                    </center>
+                    </div>
                 </div>
                 <pre>
-<?php
-include 'conexao.php';
+ <?php
+ include 'conexao.php';
 // =====================================================================//
-if(isset($_FILES['arquivo'])){
-    for($i=0; $i< count($_FILES['arquivo']['name']); $i++){
-        $nomeArq = sha1($_FILES['arquivo']['name'][$i].rand(1,999)).".jpg";
-        move_uploaded_file($_FILES['arquivo']['tmp_name'][$i], 'uploads/'.$nomeArq);
-        $sql = "INSERT INTO `img`(`caminho`) VALUES ('$nomeArq')";
-        $inserir = mysqli_query($conexao,$sql);
-        echo '<div class= "alert alert-success text-center" style="margin-top: 20px;" role="alert"> Imagem cadastrada com sucesso :)</div>';
-    }
-}
-// else{
-//     echo '<div class="alert alert-danger text-center" style="margin-top: 20px;" role="alert"> Algo deu errado T_T </div>';    
-// }
-// ====================================================================//
-?>
-</pre>
+ if(isset($_FILES['arquivo'])){
+     for($i=0; $i< count($_FILES['arquivo']['name']); $i++){
+         $nomeArq = sha1($_FILES['arquivo']['name'][$i].rand(1,999)).".jpg";
+         move_uploaded_file($_FILES['arquivo']['tmp_name'][$i], 'uploads/'.$nomeArq);
+         $sql = "INSERT INTO `img`(`caminho`) VALUES ('$nomeArq')";
+         $inserir = mysqli_query($conexao,$sql);
+         echo '<div class= "alert alert-success text-center" style="margin-top: 20px;" role="alert"> Imagem cadastrada com sucesso :)</div>';
+     }
+ }
+ else{
+    //  echo '<div class="alert alert-danger text-center" style="margin-top: 20px;" role="alert"> Algo deu errado T_T </div>';    
+ }
+ //====================================================================//
+ ?> 
+ </pre>
             </div>
         </div>
     </div>

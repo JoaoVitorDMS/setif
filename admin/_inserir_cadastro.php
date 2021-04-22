@@ -13,6 +13,6 @@ echo $sql = "INSERT INTO `usuario`(`nameUser`, `emailUser`, `senhaUser`, `status
 $inserir = mysqli_query($conexao,$sql);
 
 
-header("Location:login.php");
+header("Location:index.php");
 
 ?>

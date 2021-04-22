@@ -137,32 +137,30 @@ $id = $pega['idUser'];
                 </nav>
                 <div class="container-fluid" id="container-wrapper">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Trabalhos</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Cadastro de trabalhos</h1>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index">Inicio</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Trabalho</li>
                         </ol>
                     </div>
-                    <div style="text-align: center;">
-                        <h4>Cadastro de trabalhos</h4>
-                    </div>
                     <form action="inserirTrabalho.php" method="post">
                         <div class="form-group">
-                            <b><label class="control-label">Autores</label>
-                            <input type="text" class="form-control" name="autor" placeholder="Nome dos autores."
+                        <center>
+                            <strong><label class="control-label">Autores</label>
+                            <input type="text" class="form-control col-7" name="autor" placeholder="Nome dos autores."
                                 autocomplete="off" required>
                             <label>Título</label>
-                            <input type="text" class="form-control" name="titulo"
+                            <input type="text" class="form-control col-7" name="titulo"
                                 placeholder="Título do trabalho." autocomplete="off" required>
                             <label>Link</label>
-                            <input type="text" class="form-control" name="link" placeholder="Link, pode ser do drive/dropbox."
+                            <input type="text" class="form-control col-7" name="link" placeholder="Link, pode ser do drive/dropbox."
                                 autocomplete="off" required>
                             <label>Ano</label>
-                            <select class="form-control" name="ano" required>
+                            <select class="form-control col-2" name="ano" required>
                                 <option selected disabled value="0">Selecione.</option>
                                 <?php
                           include 'conexao.php';
-                         $sql = "SELECT * FROM ano";
+                         $sql = "SELECT * FROM ano ORDER BY idAno DESC";
                          $buscar = mysqli_query($conexao,$sql);
                           while ($array = mysqli_fetch_array($buscar)) {
                             $idAno = $array['idAno'];
@@ -172,7 +170,7 @@ $id = $pega['idUser'];
                                 <?php } ?>
                             </select>
                             <label>Tipo</label>
-                            <select class="form-control" name="tipo" required>
+                            <select class="form-control col-2" name="tipo" required>
                                 <option selected disabled value="0">Selecione.</option>
                                 <?php
                           include 'conexao.php';
@@ -186,12 +184,14 @@ $id = $pega['idUser'];
                                 <?php } ?>
                             </select>
                         </div>
-                        <div style="text-align: right;">
-                            <button type="submit" class="btn btn-sm btn-primary">Cadastrar</button>
+                        </center>
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
                         </div>
                 </div>
                 </form>
-
+                </div>
+                </div>
             </div>
             <footer class="sticky-footer bg-white">
         <div class="container my-auto">

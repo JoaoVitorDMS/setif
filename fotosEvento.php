@@ -52,9 +52,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="programacao.php">Programação</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="ensalamento.php">Ensalamento</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="normasPublicacao.php">Normas de Publicação</a>
                     </li>

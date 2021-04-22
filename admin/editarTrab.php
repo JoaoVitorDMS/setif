@@ -164,9 +164,9 @@ $id = $_GET['id'];
             <div class="form-group">
                 <label class="control-label">Autores</label>
                 <input type="hidden" class="form-control" name="id" value="<?php echo $idTrab ?>">
-                <input type="text" class="form-control" name="autor" value="<?php echo $nameAutor  ?>">
+                <input type="text" class="form-control" name="autor" value="<?php echo utf8_encode($nameAutor)  ?>">
                 <label>Titulo</label>
-                <input type="text" class="form-control" name="titulo" value="<?php echo $titulo  ?>">
+                <input type="text" class="form-control" name="titulo" value="<?php echo utf8_encode($titulo)  ?>">
                 <label>Link do drive</label>
                 <input type="text" class="form-control" name="link" value="<?php echo $link  ?>">
 

@@ -118,7 +118,7 @@ $id = $pega['idUser'];
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="ml-2 d-none d-lg-inline text-white small"><?php echo $nome; ?></span>
+                                <span class="ml-2 d-none d-lg-inline text-white small"><?php echo utf8_encode($nome); ?></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">

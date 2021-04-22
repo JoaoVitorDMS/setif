@@ -75,7 +75,7 @@ $ano = $_GET['ano'];
         if($total > 0){
 
         }else{
-            echo '<div style="text-align: center;"><p>Nenhum artigo encontrado ;-;</p></div>';
+            echo '<div style="text-align: center;"><p>Nenhum trabalho encontrado ;-;</p></div>';
         }
         while($array = mysqli_fetch_array($busca)){
             $idTrab = $array['idTrab'];
@@ -87,8 +87,9 @@ $ano = $_GET['ano'];
         ?>
         <div class="container">
         <div class="row">
-        <p style="margin-top: 20px;"><a href="<?php echo $link ?>"><?php echo utf8_encode($titulo); ?></a><br>
+        <p style="margin-top: 20px;"><a href="<?php echo $link ?>"><?php echo utf8_encode($titulo); ?></a> <small class=>(<?php echo utf8_encode($tipo); ?>)</small><br>
         <span><?php echo utf8_encode($autores); ?></span></p>
+        
         </div>
         </div>
         <?php } ?>

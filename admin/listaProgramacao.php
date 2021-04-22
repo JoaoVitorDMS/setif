@@ -140,10 +140,10 @@ $id = $pega['idUser'];
                 <!-- Container Fluid-->
                 <div class="container-fluid" id="container-wrapper">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">lista de palestras</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Programações</h1>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="./">Inicio</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">listaPalestra</li>
+                            <li class="breadcrumb-item active" aria-current="page">programações</li>
                         </ol>
                     </div>
                     <div class="table-responsive-sm">

@@ -140,7 +140,7 @@ $id = $pega['idUser'];
                 <!-- Container Fluid-->
                 <div class="container-fluid" id="container-wrapper">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Ano</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Cadasto de ano</h1>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="./">Inicio</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Ano</li>
@@ -148,12 +148,14 @@ $id = $pega['idUser'];
                     </div>
                         <form action="_inserir_ano.php" method="post" style="margin-top: 20px">
                             <div class="form-group">
-                                <b><label>Ano</label>
-                                <input type="number" name="ano" class="form-control" placeholder="Cadastre o ano" required
+                            <center>
+                                <strong><label>Ano</label></strong>
+                                <input type="number" name="ano" class="form-control col-3" placeholder="Cadastre o ano" required
                                     autocomplete="off">
                             </div>
-                            <div style="text-align: right;">
-                                <button type="submit" class="btn-sm btn btn-primary">Cadastrar</button>
+                            </center>
+                            <div style="text-align: center;">
+                                <button type="submit" class="btn-lg btn btn-primary">Cadastrar</button>
                             </div>
                         </form>
                     </div>

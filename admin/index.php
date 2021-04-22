@@ -80,7 +80,7 @@ $id = $pega['idUser'];
                         <a class="collapse-item" href="cadastroTrab.php">Trabalho</a>
                         <a class="collapse-item" href="adicionarAno.php">Ano</a>
                         <a class="collapse-item" href="adicionarImagem.php">Imagem</a>
-                        <a class="collapse-item" href="cadastroPalestra.php">Palestra</a>
+                        <a class="collapse-item" href="cadastroProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>
@@ -100,7 +100,7 @@ $id = $pega['idUser'];
                         <a class="collapse-item" href="listarTrab">Listar Trabalhos</a>
                         <a class="collapse-item" href="listAno.php">Anos</a>
                         <a class="collapse-item" href="listImagem.php">Imagens</a>
-                        <a class="collapse-item" href="listaPalestra.php">Palestras</a>
+                        <a class="collapse-item" href="listaProgramacao.php">Programação</a>
                     </div>
                 </div>
             </li>
@@ -170,7 +170,7 @@ $id = $pega['idUser'];
   <div class="col">
     <div class="card text-white bg-success">
       <div class="card-body">
-        <h5 class="card-title">Imagem</h5>
+        <h5 class="card-title">Fotos</h5>
         <p class="card-text">Cadastrar imagens do evento.</p>
         <a href="adicionarImagem.php" class="btn btn-dark text-white">Imagem</a>
       </div>
@@ -190,6 +190,8 @@ $id = $pega['idUser'];
         <!---Container Fluid-->
     </div>
     <!-- Footer -->
+    </div>
+    </div>
     </div>
     <footer class="sticky-footer bg-white">
         <div class="container my-auto">
